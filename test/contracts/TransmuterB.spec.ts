@@ -11,7 +11,7 @@ import { Erc20Mock } from "../../types/Erc20Mock";
 import { getAddress, parseEther, formatEther } from "ethers/lib/utils";
 import { MAXIMUM_U256, ZERO_ADDRESS, mineBlocks } from "../utils/helpers";
 import { TransmuterB } from "../../types/TransmuterB";
-import { waitForTxConfirmation } from "../../utils/txUtils";
+// import { waitForTxConfirmation } from "../../utils/txUtils";
 import { SSL_OP_EPHEMERAL_RSA } from "constants";
 import { Transmuter } from "../../types/Transmuter";
 
@@ -105,6 +105,9 @@ describe("TransmuterB", () => {
     transVaultAdaptor = (await VaultAdapterMockFactory.connect(deployer).deploy(
         token.address
       )) as VaultAdapterMockWithIndirection;
+    // [TODO]
+    console.log("SETTING PAUSE AS FALSE BY DEFAULT") 
+    await transmuter.connect(governance).setPause(false);
     await transmuter.connect(governance).setKeepers(keeprs, keeprStates);
     await transmuter.connect(governance).setRewards(await rewards.getAddress())
     await transmuter.connect(governance).initialize(transVaultAdaptor.address);
