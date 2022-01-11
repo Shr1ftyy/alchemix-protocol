@@ -4,12 +4,30 @@
 - /deployments : current mainnet deployments of the Alchemix protocol, including abi's and addresses
 - /tests : tests for the contracts
 
-## Bug Bounty
+# Local Development
+The following assumes the use of `node@>=10`.
 
-This bug bounty document is to verify that Alchemix hosts a bug bounty on Immunefi at the address [https://immunefi.com/bounty/alchemix](https://immunefi.com/bounty/alchemix).
+## Install Dependencies
 
-If you have found a vulnerability in our project, it must be submitted through [Immunefi's platform](https://immunefi.com/). Immunefi will handle bug bounty communications.
+`yarn`
 
-See the bounty page at Immunefi for more details on accepted vulnerabilities, payout amounts, and rules of participation.
+## Compile Contracts
 
-Users who violate the rules of participation will not receive bug bounty payouts and may be temporarily suspended or banned from the bug bounty program.
+`yarn compile`
+
+## Run Coverage and/or Tests
+
+`yarn coverage`
+`yarn test`
+
+## Local Deployment
+
+Fork FTM Mainnet via ganache-cli:
+
+`npx ganache-cli --fork https://rpc.ftm.tools -i 1337`
+
+Deploy locally with truffle:
+
+  `npx truffle migrate --network development`
+
+A Documentation w/ changes made vs. Alchemix main fork can be seen inside DOCUMENTATION.md
