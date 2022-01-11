@@ -18,6 +18,7 @@ The following assumes the use of `node@>=10`.
 ## Run Coverage and/or Tests
 
 `yarn coverage`
+
 `yarn test`
 
 ## Local Deployment
