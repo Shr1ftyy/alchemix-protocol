@@ -1808,12 +1808,12 @@
     "1337": {
       "events": {},
       "links": {},
-      "address": "0x4d83bF7C48e7f31Db4685A23847167Af25b8F483",
-      "transactionHash": "0x9fd1bda267babc3485c3271d3ebf0ad6968d163d097a8508ccd7900108eeb7e0"
+      "address": "0x00e58E5780e040c008b62Db744ddD1e03135447F",
+      "transactionHash": "0xa541a4428e755f2740a23929eac716676026dc69331b40d6a9cff451247855b2"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T11:15:45.136Z",
+  "updatedAt": "2022-01-11T13:48:11.489Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "A vault adapter implementation which wraps a yEarn vault.",

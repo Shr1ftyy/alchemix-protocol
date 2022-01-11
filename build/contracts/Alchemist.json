@@ -46719,12 +46719,12 @@
         }
       },
       "links": {},
-      "address": "0xF2548504A8CA1d1C6c91070527B35788B000291d",
-      "transactionHash": "0xdcb67d09e8c165112af39442b3f6b8ad91e0a79e18f39deea451d5e9f2fad90f"
+      "address": "0x526C295CA72e30C6DA3085FA22B797c288a13FA2",
+      "transactionHash": "0xf1057a5df621402acac0ed07d237fff63e85ce674f006858e4b08ab24e18a904"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T11:15:45.027Z",
+  "updatedAt": "2022-01-11T13:48:11.380Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

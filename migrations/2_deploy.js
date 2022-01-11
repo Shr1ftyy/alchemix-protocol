@@ -32,6 +32,8 @@ module.exports = async function (deployer) {
                   addr,
                   addr);
   AlUSD = await Alchemist.deployed();
+  console.log('disable emergency exit')
+  AlUSD.setEmergencyExit(false);
   console.log('DEPLOYED')
   console.log('deploying Transmuter')
   await deployer.deploy(Transmuter, 
