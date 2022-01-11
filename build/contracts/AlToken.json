@@ -10501,12 +10501,12 @@
         }
       },
       "links": {},
-      "address": "0x334B4448624Feda145d6975565F14925A612De13",
-      "transactionHash": "0x6a280c6acc13e09cc3de433cd991f460ba80a256130412da7a71ebb020aa111a"
+      "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "transactionHash": "0x38b15d10233bda619c261b70ee97c407f88418e0f7ec64313c9601eb8ec30b9e"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T13:48:11.368Z",
+  "updatedAt": "2022-01-11T15:05:28.339Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "This is the contract for the Alchemix utillity token usd. Initially, the contract deployer is given both the admin and minter role. This allows them to pre-mine tokens, transfer admin to a timelock contract, and lastly, grant the staking pools the minter role. After this is done, the deployer must revoke their admin role and minter role.",

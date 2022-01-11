@@ -63605,12 +63605,12 @@
         }
       },
       "links": {},
-      "address": "0x68bC94420059AD9CE9644B1b311E7B5A45081bAA",
-      "transactionHash": "0xe89cbe7b263a8733193c69c8710eeceb9ec247a7306dead849dc73f0094049be"
+      "address": "0x5f8e26fAcC23FA4cbd87b8d9Dbbd33D5047abDE1",
+      "transactionHash": "0xbdde89876127f98315295497476ed15a162873ca9ed775da025ee0bf96b59693"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T13:48:11.464Z",
+  "updatedAt": "2022-01-11T15:05:28.448Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Implementation of the {IERC20Burnable} interface. This implementation is agnostic to the way tokens are created. This means that a supply mechanism has to be added in a derived contract using {_mint}. For a generic mechanism see {ERC20PresetMinterPauser}. TIP: For a detailed writeup see our guide https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[How to implement supply mechanisms]. We have followed general OpenZeppelin guidelines: functions revert instead of returning `false` on failure. This behavior is nonetheless conventional and does not conflict with the expectations of ERC20 applications. Additionally, an {Approval} event is emitted on calls to {transferFrom}. This allows applications to reconstruct the allowance for all accounts just by listening to said events. Other implementations of the EIP may not emit these events, as it isn't required by the specification. Finally, the non-standard {decreaseAllowance} and {increaseAllowance} functions have been added to mitigate the well-known issues around setting allowances. See {IERC20Burnable-approve}.",
