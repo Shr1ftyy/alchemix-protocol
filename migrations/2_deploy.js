@@ -6,6 +6,9 @@ const Transmuter = artifacts.require("Transmuter");
 const TransmuterB = artifacts.require("TransmuterB");
 const TransmuterFTM = artifacts.require("TransmuterETH");
 const YearnVaultAdapter = artifacts.require("adapters/YearnVaultAdapter");
+const YearnVaultAdapterFTM = artifacts.require("adapters/YearnVaultAdapterETH");
+const YearnVaultAdapterWithIndirection = artifacts.require("adapters/YearnVaultAdapterWithIndirection");
+const YearnVaultAdapterWithIndirectionFTM = artifacts.require("adapters/YearnVaultAdapterWithIndirectionETH");
 
 module.exports = function (deployer) {
   // CONSTANTS FOR DEPLOYMENT
@@ -18,19 +21,28 @@ module.exports = function (deployer) {
   deployer.deploy(alFTM);
   AL_FTM = await alFTM.deployed();
 
-  // alUSD vault initialization
+  // alUSD vault and transmuter initialization
   deployer.deploy(Alchemist, "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e", // fantom dai address,
                   AL_USD.address,
                   deployer.address,
                   deployer.address);
   AlUSD = await Alchemist.deployed();
-  deployer.deploy(YearnVaultAdapter, yDAIVault, AlUSD.address)
-  yVaultAdapter = await YearnVaultAdapter.deployed();
   deployer.deploy(Transmuter, 
                     AL_USD.address, 
                     "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e", 
                     deployer.address);
   trans = await Transmuter.deployed()
+  deployer.deploy(TransmuterB, 
+                    AL_USD.address, 
+                    "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e", 
+                    deployer.address);
+  transB = await Transmuter.deployed()
+
+  deployer.deploy(YearnVaultAdapter, yDAIVault, AlUSD.address)
+  yVaultAdapter = await YearnVaultAdapter.deployed();
+  deployer.deploy(YearnVaultAdapterWithIndirection, yDAIVault, transB.address)
+  yVaultAdapterWithIndirection = await YearnVaultAdapterWithIndirection.deployed();
+
   await AlUSD.setTransmuter(trans.address);
   await AlUSD.setRewards(deployer.address);
   await AlUSD.setHarvestFee(1000);
@@ -38,20 +50,27 @@ module.exports = function (deployer) {
   await AlUSD.setOracleAddress(linkOracle, 98000000);
 
 
+  // alFTM vault and transmuter initialization
   deployer.deploy(AlchemistFTM, "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", // fantom wftm address,
                   AL_FTM.address,
                   deployer.address,
                   deployer.address);
   AlFTM = await AlchemistFTM.deployed();
-  deployer.deploy(YearnVaultAdapter, yFTMVault, AlFTM.address)
-                  
-  deployer.deploy(TransmuterB, 
-                  AL_USD.address, 
-                  "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e", 
-                  deployer.address);
-
-  deployer.deploy(TransmuterETH, 
+  deployer.deploy(TransmuterFTM, 
                   AL_FTM.address, 
                   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", 
                   deployer.address);
+
+  transFTM = await TransmuterFTM.deployed()
+  deployer.deploy(YearnVaultAdapterFTM, yFTMVault, AlFTM.address)
+  yVaultAdapterFTM = await YearnVaultAdapterFTM.deployed();
+  deployer.deploy(YearnVaultAdapterWithIndirectionFTM, yFTMVault, transFTM.address)
+  yVaultAdapterWithIndirectionFTM = await YearnVaultAdapterWithIndirectionFTM.deployed();
+
+  await AlUSD.setRewards(deployer.address);
+  await AlUSD.setHarvestFee(1000);
+  await AlUSD.setKeepers([deployer.address], [true]);
+  await AlUSD.setTransmuter(transFTM.address);
+  await AlUSD.initialize(yVaultAdapterFTM.address);
+
 };
