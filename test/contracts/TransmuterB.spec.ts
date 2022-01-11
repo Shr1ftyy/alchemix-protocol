@@ -979,6 +979,8 @@ describe("TransmuterB", () => {
       await transmuter.connect(governance).setPause(true);
       await transmuter.connect(governance).recallAllFundsFromVault(0);
       let newTransmuterPreMigrateBal = await token.balanceOf(newTransmuter.address);
+      // set pause to false
+      await newTransmuter.connect(governance).setPause(false);
       await transmuter.connect(governance).migrateFunds(newTransmuter.address);
 
       let transmuterPostMigrateBal = await token.balanceOf(transmuter.address);

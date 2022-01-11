@@ -19,11 +19,21 @@ Due to a lack of detailed documentation by Alchemix, the deployment process was 
 For some odd reason, there were a few non-existing functions that were unused yet still imported
 in some of the test specs, of which include the following:
 <pre>
- - test/contracts:
+  - test/contracts/AlchemistEth.spec.ts
  import { MAXIMUM_U256, ZERO_ADDRESS, <b>getGas</b> } from "../utils/helpers";
  import { <b>mintDaiToAddress</b> } from "../../utils/mintUtils";
 </pre>
 As a result, these were removed.
+Further minor modifications had to be made to the testing suite, since certain conditions were not being met
+due to poor handling of contract states prior to running certain tests (i.e emergency pause was enabled prior to
+tests that required them to be disabled, and sometimes even enabled/disabled on the wrong contracts). These changes can be seen below:
+
+<pre>
+  - test/contracts/TransmuterB.spec.ts:
+  110: await transmuter.connect(governance).setPause(false);
+  983: await newTransmuter.connect(governance).setPause(false); 
+</pre>
+
 Furthermore, this deployment lacks the ALCX token and other auxilary contracts that are not
 related to the token vaults this connects as well as the core Alchemist and Transmuter contracts.
 

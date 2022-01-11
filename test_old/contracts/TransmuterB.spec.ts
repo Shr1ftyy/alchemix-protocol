@@ -948,6 +948,8 @@ describe("TransmuterB", () => {
       await newTransmuter.connect(governance).setRewards(await rewards.getAddress());
       await newTransmuter.connect(governance).initialize(newTransVaultAdaptor.address);
       await newTransmuter.connect(governance).setWhitelist(transmuter.address, true);
+      // added this to fix test not passing
+      await transmuter.connect(governance).setPause(false);
       await transmuter.connect(governance).setTransmutationPeriod(transmutationPeriod);
       await transmuter.connect(depositor).stake(stakeAmt);
       await transmuter.connect(governance).setPlantableThreshold(plantableThreshold);
