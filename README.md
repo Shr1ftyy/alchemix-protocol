@@ -27,8 +27,18 @@ Fork FTM Mainnet via ganache-cli:
 
 `npx ganache-cli --fork https://rpc.ftm.tools -i 1337`
 
+Optionally, one may make the state of the chain and key generation persistant by using
+the `--db` and `-d` options. (refer to Truffle's documentation or manpage for further information on this)
+
 Deploy locally with truffle:
 
   `npx truffle migrate --network development`
 
-A Documentation w/ changes made vs. Alchemix main fork can be seen inside DOCUMENTATION.md
+## Local Live Testing
+
+As a POC, `live_test.js` can be executed with Truffle to run some basic functions on local deployments.
+Ensure that the `.env` has the correct contract addresses prior to running the script.
+
+`npx truffle exec live_test.js`
+
+A Documentation w/ changes made vs. Alchemix's main fork can be seen inside DOCUMENTATION.md
