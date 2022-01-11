@@ -1,0 +1,330 @@
+{
+  "contractName": "ITransmuter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "origin",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "distribute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"origin\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"distribute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ITransmuter.sol\":\"ITransmuter\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ITransmuter.sol\":{\"keccak256\":\"0x6cbb6dda4377d625635453ceb7a8c8fc9c8d5c55d2e6ef0b11b5c9ccb270b59c\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://af5ed6f49a1ca85e82b710f608e30112b26296699a8e9baddae629637d4548e4\",\"dweb:/ipfs/QmYTjLQernbrF5MQv1YinrXQXJVqd9Q7LJfJ3cE6szXW4r\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.6.12;\n\ninterface ITransmuter  {\n  function distribute (address origin, uint256 amount) external;\n}",
+  "sourcePath": "/Users/shr1ftyy/Personal/Computing/bounties/alcx/alchemix-protocol/contracts/interfaces/ITransmuter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ITransmuter.sol",
+    "exportedSymbols": {
+      "ITransmuter": [
+        23811
+      ]
+    },
+    "id": 23812,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23803,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:24:36"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 23811,
+        "linearizedBaseContracts": [
+          23811
+        ],
+        "name": "ITransmuter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "fb932108",
+            "id": 23810,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distribute",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23808,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23805,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23810,
+                  "src": "110:14:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 23804,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "110:7:36",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23807,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23810,
+                  "src": "126:14:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23806,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "126:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "109:32:36"
+            },
+            "returnParameters": {
+              "id": 23809,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:0:36"
+            },
+            "scope": 23811,
+            "src": "89:62:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 23812,
+        "src": "62:91:36"
+      }
+    ],
+    "src": "36:117:36"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/ITransmuter.sol",
+      "exportedSymbols": {
+        "ITransmuter": [
+          23811
+        ]
+      },
+      "license": "GPL-3.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 23803,
+        "name": "PragmaDirective",
+        "src": "36:24:36"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            23811
+          ],
+          "name": "ITransmuter",
+          "scope": 23812
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "fb932108",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "distribute",
+              "overrides": null,
+              "scope": 23811,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "origin",
+                      "overrides": null,
+                      "scope": 23810,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 23804,
+                        "name": "ElementaryTypeName",
+                        "src": "110:7:36"
+                      }
+                    ],
+                    "id": 23805,
+                    "name": "VariableDeclaration",
+                    "src": "110:14:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 23810,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 23806,
+                        "name": "ElementaryTypeName",
+                        "src": "126:7:36"
+                      }
+                    ],
+                    "id": 23807,
+                    "name": "VariableDeclaration",
+                    "src": "126:14:36"
+                  }
+                ],
+                "id": 23808,
+                "name": "ParameterList",
+                "src": "109:32:36"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23809,
+                "name": "ParameterList",
+                "src": "150:0:36"
+              }
+            ],
+            "id": 23810,
+            "name": "FunctionDefinition",
+            "src": "89:62:36"
+          }
+        ],
+        "id": 23811,
+        "name": "ContractDefinition",
+        "src": "62:91:36"
+      }
+    ],
+    "id": 23812,
+    "name": "SourceUnit",
+    "src": "36:117:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-11T09:34:07.497Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "contractName": "IChainlink",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "latestAnswer",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IChainlink.sol\":\"IChainlink\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IChainlink.sol\":{\"keccak256\":\"0x6b5a65dc49c81087d8f1ae94904c43d8d6e0aac8c2da4cf6abe2352a34cf5d68\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://1e5cabc9eb22e0e626948145eb4ea7e503afaba2db5a1c6b795afeb33b91da9f\",\"dweb:/ipfs/QmQt9PpvmEwBHewFwycGYm7uDcm74gFMeCDhkHyU59c5dP\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.6.12;\n\ninterface IChainlink {\n  function latestAnswer() external view returns (int256);\n}",
+  "sourcePath": "/Users/shr1ftyy/Personal/Computing/bounties/alcx/alchemix-protocol/contracts/interfaces/IChainlink.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IChainlink.sol",
+    "exportedSymbols": {
+      "IChainlink": [
+        23682
+      ]
+    },
+    "id": 23683,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23676,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:24:30"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 23682,
+        "linearizedBaseContracts": [
+          23682
+        ],
+        "name": "IChainlink",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "50d25bcd",
+            "id": 23681,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "latestAnswer",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23677,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "108:2:30"
+            },
+            "returnParameters": {
+              "id": 23680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23679,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23681,
+                  "src": "134:6:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 23678,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "133:8:30"
+            },
+            "scope": 23682,
+            "src": "87:55:30",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 23683,
+        "src": "62:82:30"
+      }
+    ],
+    "src": "36:108:30"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IChainlink.sol",
+      "exportedSymbols": {
+        "IChainlink": [
+          23682
+        ]
+      },
+      "license": "GPL-3.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 23676,
+        "name": "PragmaDirective",
+        "src": "36:24:30"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            23682
+          ],
+          "name": "IChainlink",
+          "scope": 23683
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "50d25bcd",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "latestAnswer",
+              "overrides": null,
+              "scope": 23682,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23677,
+                "name": "ParameterList",
+                "src": "108:2:30"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 23681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 23678,
+                        "name": "ElementaryTypeName",
+                        "src": "134:6:30"
+                      }
+                    ],
+                    "id": 23679,
+                    "name": "VariableDeclaration",
+                    "src": "134:6:30"
+                  }
+                ],
+                "id": 23680,
+                "name": "ParameterList",
+                "src": "133:8:30"
+              }
+            ],
+            "id": 23681,
+            "name": "FunctionDefinition",
+            "src": "87:55:30"
+          }
+        ],
+        "id": 23682,
+        "name": "ContractDefinition",
+        "src": "62:82:30"
+      }
+    ],
+    "id": 23683,
+    "name": "SourceUnit",
+    "src": "36:108:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-11T09:34:07.495Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

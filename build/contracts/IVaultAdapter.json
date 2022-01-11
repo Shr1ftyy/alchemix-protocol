@@ -1,0 +1,890 @@
+{
+  "contractName": "IVaultAdapter",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IDetailedERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IDetailedERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"deposit(uint256)\":{\"details\":\"Deposits funds into the vault.\",\"params\":{\"_amount\":\"the amount of funds to deposit.\"}},\"token()\":{\"details\":\"Gets the token that the adapter accepts.\"},\"totalValue()\":{\"details\":\"The total value of the assets deposited into the vault.\"},\"withdraw(address,uint256)\":{\"details\":\"Attempts to withdraw funds from the wrapped vault. The amount withdrawn to the recipient may be less than the amount requested.\",\"params\":{\"_amount\":\"the amount of funds to withdraw.\",\"_recipient\":\"the recipient of the funds.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Interface for all Vault Adapter implementations.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IVaultAdapter.sol\":\"IVaultAdapter\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"project:/contracts/interfaces/IDetailedERC20.sol\":{\"keccak256\":\"0xd7da49ed3fd58d47d3d9d4c37d96841d117916cb3975648ec82d09a30dc5e63d\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://4490f6f7e7d5367e07c8aae4bdaed29e10cc706222ce0605c98778049b78eaa8\",\"dweb:/ipfs/QmfLS78S5b8DuED7aCQU6vaU2yCZyutn4YsQf41TwgiJfC\"]},\"project:/contracts/interfaces/IVaultAdapter.sol\":{\"keccak256\":\"0x2068367acc37e93a71f8c91343abdf2714895df202fff414d11c3f258af55f52\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://a38829a87c024bf373aae862e23f022167a6961d69270fdf3a212c3062c21d3e\",\"dweb:/ipfs/QmaDRHNhX2EGE328QddqsL6RcDjrTGqmHTbDwZ5h7Tz9se\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.6.12;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\nimport \"./IDetailedERC20.sol\";\n\n/// Interface for all Vault Adapter implementations.\ninterface IVaultAdapter {\n\n  /// @dev Gets the token that the adapter accepts.\n  function token() external view returns (IDetailedERC20);\n\n  /// @dev The total value of the assets deposited into the vault.\n  function totalValue() external view returns (uint256);\n\n  /// @dev Deposits funds into the vault.\n  ///\n  /// @param _amount  the amount of funds to deposit.\n  function deposit(uint256 _amount) external;\n\n  /// @dev Attempts to withdraw funds from the wrapped vault.\n  ///\n  /// The amount withdrawn to the recipient may be less than the amount requested.\n  ///\n  /// @param _recipient the recipient of the funds.\n  /// @param _amount    the amount of funds to withdraw.\n  function withdraw(address _recipient, uint256 _amount) external;\n}",
+  "sourcePath": "/Users/shr1ftyy/Personal/Computing/bounties/alcx/alchemix-protocol/contracts/interfaces/IVaultAdapter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IVaultAdapter.sol",
+    "exportedSymbols": {
+      "IVaultAdapter": [
+        23843
+      ]
+    },
+    "id": 23844,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23813,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:24:37"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 23814,
+        "nodeType": "ImportDirective",
+        "scope": 23844,
+        "sourceUnit": 1405,
+        "src": "62:56:37",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
+        "file": "./IDetailedERC20.sol",
+        "id": 23815,
+        "nodeType": "ImportDirective",
+        "scope": 23844,
+        "sourceUnit": 23736,
+        "src": "120:30:37",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 23816,
+          "nodeType": "StructuredDocumentation",
+          "src": "152:53:37",
+          "text": "Interface for all Vault Adapter implementations."
+        },
+        "fullyImplemented": false,
+        "id": 23843,
+        "linearizedBaseContracts": [
+          23843
+        ],
+        "name": "IVaultAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 23817,
+              "nodeType": "StructuredDocumentation",
+              "src": "234:49:37",
+              "text": "@dev Gets the token that the adapter accepts."
+            },
+            "functionSelector": "fc0c546a",
+            "id": 23822,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23818,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "300:2:37"
+            },
+            "returnParameters": {
+              "id": 23821,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23820,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23822,
+                  "src": "326:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDetailedERC20_$23735",
+                    "typeString": "contract IDetailedERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 23819,
+                    "name": "IDetailedERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 23735,
+                    "src": "326:14:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDetailedERC20_$23735",
+                      "typeString": "contract IDetailedERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "325:16:37"
+            },
+            "scope": 23843,
+            "src": "286:56:37",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 23823,
+              "nodeType": "StructuredDocumentation",
+              "src": "346:64:37",
+              "text": "@dev The total value of the assets deposited into the vault."
+            },
+            "functionSelector": "d4c3eea0",
+            "id": 23828,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23824,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:2:37"
+            },
+            "returnParameters": {
+              "id": 23827,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23826,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23828,
+                  "src": "458:7:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23825,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:9:37"
+            },
+            "scope": 23843,
+            "src": "413:54:37",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 23829,
+              "nodeType": "StructuredDocumentation",
+              "src": "471:99:37",
+              "text": "@dev Deposits funds into the vault.\n @param _amount  the amount of funds to deposit."
+            },
+            "functionSelector": "b6b55f25",
+            "id": 23834,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23832,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23831,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23834,
+                  "src": "590:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23830,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "590:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "589:17:37"
+            },
+            "returnParameters": {
+              "id": 23833,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "615:0:37"
+            },
+            "scope": 23843,
+            "src": "573:43:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 23835,
+              "nodeType": "StructuredDocumentation",
+              "src": "620:263:37",
+              "text": "@dev Attempts to withdraw funds from the wrapped vault.\n The amount withdrawn to the recipient may be less than the amount requested.\n @param _recipient the recipient of the funds.\n @param _amount    the amount of funds to withdraw."
+            },
+            "functionSelector": "f3fef3a3",
+            "id": 23842,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 23840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23837,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23842,
+                  "src": "904:18:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 23836,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "904:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23839,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 23842,
+                  "src": "924:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23838,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "924:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "903:37:37"
+            },
+            "returnParameters": {
+              "id": 23841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "949:0:37"
+            },
+            "scope": 23843,
+            "src": "886:64:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 23844,
+        "src": "205:747:37"
+      }
+    ],
+    "src": "36:916:37"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IVaultAdapter.sol",
+      "exportedSymbols": {
+        "IVaultAdapter": [
+          23843
+        ]
+      },
+      "license": "GPL-3.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 23813,
+        "name": "PragmaDirective",
+        "src": "36:24:37"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1405,
+          "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "scope": 23844,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 23814,
+        "name": "ImportDirective",
+        "src": "62:56:37"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 23736,
+          "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
+          "file": "./IDetailedERC20.sol",
+          "scope": 23844,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 23815,
+        "name": "ImportDirective",
+        "src": "120:30:37"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            23843
+          ],
+          "name": "IVaultAdapter",
+          "scope": 23844
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "Interface for all Vault Adapter implementations."
+            },
+            "id": 23816,
+            "name": "StructuredDocumentation",
+            "src": "152:53:37"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "fc0c546a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "token",
+              "overrides": null,
+              "scope": 23843,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Gets the token that the adapter accepts."
+                },
+                "id": 23817,
+                "name": "StructuredDocumentation",
+                "src": "234:49:37"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23818,
+                "name": "ParameterList",
+                "src": "300:2:37"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 23822,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IDetailedERC20",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "IDetailedERC20",
+                          "referencedDeclaration": 23735,
+                          "type": "contract IDetailedERC20"
+                        },
+                        "id": 23819,
+                        "name": "UserDefinedTypeName",
+                        "src": "326:14:37"
+                      }
+                    ],
+                    "id": 23820,
+                    "name": "VariableDeclaration",
+                    "src": "326:14:37"
+                  }
+                ],
+                "id": 23821,
+                "name": "ParameterList",
+                "src": "325:16:37"
+              }
+            ],
+            "id": 23822,
+            "name": "FunctionDefinition",
+            "src": "286:56:37"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "d4c3eea0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "totalValue",
+              "overrides": null,
+              "scope": 23843,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev The total value of the assets deposited into the vault."
+                },
+                "id": 23823,
+                "name": "StructuredDocumentation",
+                "src": "346:64:37"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23824,
+                "name": "ParameterList",
+                "src": "432:2:37"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 23828,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 23825,
+                        "name": "ElementaryTypeName",
+                        "src": "458:7:37"
+                      }
+                    ],
+                    "id": 23826,
+                    "name": "VariableDeclaration",
+                    "src": "458:7:37"
+                  }
+                ],
+                "id": 23827,
+                "name": "ParameterList",
+                "src": "457:9:37"
+              }
+            ],
+            "id": 23828,
+            "name": "FunctionDefinition",
+            "src": "413:54:37"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "b6b55f25",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "deposit",
+              "overrides": null,
+              "scope": 23843,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Deposits funds into the vault.\n @param _amount  the amount of funds to deposit."
+                },
+                "id": 23829,
+                "name": "StructuredDocumentation",
+                "src": "471:99:37"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_amount",
+                      "overrides": null,
+                      "scope": 23834,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 23830,
+                        "name": "ElementaryTypeName",
+                        "src": "590:7:37"
+                      }
+                    ],
+                    "id": 23831,
+                    "name": "VariableDeclaration",
+                    "src": "590:15:37"
+                  }
+                ],
+                "id": 23832,
+                "name": "ParameterList",
+                "src": "589:17:37"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23833,
+                "name": "ParameterList",
+                "src": "615:0:37"
+              }
+            ],
+            "id": 23834,
+            "name": "FunctionDefinition",
+            "src": "573:43:37"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "f3fef3a3",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "withdraw",
+              "overrides": null,
+              "scope": 23843,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Attempts to withdraw funds from the wrapped vault.\n The amount withdrawn to the recipient may be less than the amount requested.\n @param _recipient the recipient of the funds.\n @param _amount    the amount of funds to withdraw."
+                },
+                "id": 23835,
+                "name": "StructuredDocumentation",
+                "src": "620:263:37"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_recipient",
+                      "overrides": null,
+                      "scope": 23842,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 23836,
+                        "name": "ElementaryTypeName",
+                        "src": "904:7:37"
+                      }
+                    ],
+                    "id": 23837,
+                    "name": "VariableDeclaration",
+                    "src": "904:18:37"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_amount",
+                      "overrides": null,
+                      "scope": 23842,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 23838,
+                        "name": "ElementaryTypeName",
+                        "src": "924:7:37"
+                      }
+                    ],
+                    "id": 23839,
+                    "name": "VariableDeclaration",
+                    "src": "924:15:37"
+                  }
+                ],
+                "id": 23840,
+                "name": "ParameterList",
+                "src": "903:37:37"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 23841,
+                "name": "ParameterList",
+                "src": "949:0:37"
+              }
+            ],
+            "id": 23842,
+            "name": "FunctionDefinition",
+            "src": "886:64:37"
+          }
+        ],
+        "id": 23843,
+        "name": "ContractDefinition",
+        "src": "205:747:37"
+      }
+    ],
+    "id": 23844,
+    "name": "SourceUnit",
+    "src": "36:916:37"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-11T09:34:07.498Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "deposit(uint256)": {
+        "details": "Deposits funds into the vault.",
+        "params": {
+          "_amount": "the amount of funds to deposit."
+        }
+      },
+      "token()": {
+        "details": "Gets the token that the adapter accepts."
+      },
+      "totalValue()": {
+        "details": "The total value of the assets deposited into the vault."
+      },
+      "withdraw(address,uint256)": {
+        "details": "Attempts to withdraw funds from the wrapped vault. The amount withdrawn to the recipient may be less than the amount requested.",
+        "params": {
+          "_amount": "the amount of funds to withdraw.",
+          "_recipient": "the recipient of the funds."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Interface for all Vault Adapter implementations.",
+    "version": 1
+  }
+}

@@ -1,0 +1,3354 @@
+{
+  "contractName": "Stake",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"A library which provides the Stake data struct and associated functions.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Stake\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/pools/Stake.sol\":\"Stake\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/math/Math.sol\":{\"keccak256\":\"0x363bd3b45201f07c9b71c2edc96533468cf14a3d029fabd82fddceb1eb3ebd9c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d676d5c3a72e5fea8364a1e3e5b488a959aae08d069995b1274027f3845e6521\",\"dweb:/ipfs/Qma7DL738Wje4G9kcwW9bXwTGY4ePR7SMmsMhbULWqmixE\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xf12dfbe97e6276980b83d2830bb0eb75e0cf4f3e626c2471137f82158ae6a0fc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3a849c2d95e85463909e5b5c920b13e7a11216ca14127085e16d22b9379d52a\",\"dweb:/ipfs/QmUg3CZDbCCcQdroEpexBy5ZFd5vD1UWijWQq9qHZjtJNQ\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]},\"hardhat/console.sol\":{\"keccak256\":\"0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763\",\"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N\"]},\"project:/contracts/interfaces/IDetailedERC20.sol\":{\"keccak256\":\"0xd7da49ed3fd58d47d3d9d4c37d96841d117916cb3975648ec82d09a30dc5e63d\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://4490f6f7e7d5367e07c8aae4bdaed29e10cc706222ce0605c98778049b78eaa8\",\"dweb:/ipfs/QmfLS78S5b8DuED7aCQU6vaU2yCZyutn4YsQf41TwgiJfC\"]},\"project:/contracts/libraries/FixedPointMath.sol\":{\"keccak256\":\"0x23fb0a959da28d0330f9b6f4c45a982f46d1d8f501d99ebaa7e1f35b47d9cb70\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://2469ec8646a79df446c3a309f4cc5cd98922b499ab1d5be9e74403ae9e9373d1\",\"dweb:/ipfs/QmesSPZcYM2ZvmMBi6chNmg7gpLE1X87Fi6qXsC9mDBqhz\"]},\"project:/contracts/libraries/pools/Pool.sol\":{\"keccak256\":\"0x5d7dbe978a05953ee9dd6eb48144e28346de6e479c03201a6ac17d08a77b0c9a\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://8c07ff8d458776dd32ea94d2c84eaba84cac46ac39d308202d2e80bef43db24a\",\"dweb:/ipfs/QmdXnELCbMVe3bqNDRCA9XhtoCgKksspBBtrTfrCZnWgwt\"]},\"project:/contracts/libraries/pools/Stake.sol\":{\"keccak256\":\"0x7d129ca0537e6fad0e33f1430f51eef4c941c65df37bc363a0a6670b9cfefc43\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://620061ec5d5c2b4bb7b0b6f6495473c0c552cca0cc2bc5d1d4f3bbdb41fcaea9\",\"dweb:/ipfs/QmeJosvpSiuaWaSAekk3uAohBLNqSo6f3nUUeVdnQzpnpr\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220af6436fda06add2d0e675cc34d7ea65fc32b5070135919cda2899a8e4987b52464736f6c634300060c0033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220af6436fda06add2d0e675cc34d7ea65fc32b5070135919cda2899a8e4987b52464736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "592:1231:48:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "592:1231:48:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.6.12;\npragma experimental ABIEncoderV2;\n\nimport {Math} from \"@openzeppelin/contracts/math/Math.sol\";\nimport {SafeERC20} from \"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\";\nimport {SafeMath} from \"@openzeppelin/contracts/math/SafeMath.sol\";\n\nimport {FixedPointMath} from \"../FixedPointMath.sol\";\nimport {IDetailedERC20} from \"../../interfaces/IDetailedERC20.sol\";\nimport {Pool} from \"./Pool.sol\";\n\nimport \"hardhat/console.sol\";\n\n/// @title Stake\n///\n/// @dev A library which provides the Stake data struct and associated functions.\nlibrary Stake {\n  using FixedPointMath for FixedPointMath.FixedDecimal;\n  using Pool for Pool.Data;\n  using SafeMath for uint256;\n  using Stake for Stake.Data;\n\n  struct Data {\n    uint256 totalDeposited;\n    uint256 totalUnclaimed;\n    FixedPointMath.FixedDecimal lastAccumulatedWeight;\n  }\n\n  function update(Data storage _self, Pool.Data storage _pool, Pool.Context storage _ctx) internal {\n    _self.totalUnclaimed = _self.getUpdatedTotalUnclaimed(_pool, _ctx);\n    _self.lastAccumulatedWeight = _pool.getUpdatedAccumulatedRewardWeight(_ctx);\n  }\n\n  function getUpdatedTotalUnclaimed(Data storage _self, Pool.Data storage _pool, Pool.Context storage _ctx)\n    internal view\n    returns (uint256)\n  {\n    FixedPointMath.FixedDecimal memory _currentAccumulatedWeight = _pool.getUpdatedAccumulatedRewardWeight(_ctx);\n    FixedPointMath.FixedDecimal memory _lastAccumulatedWeight = _self.lastAccumulatedWeight;\n\n    if (_currentAccumulatedWeight.cmp(_lastAccumulatedWeight) == 0) {\n      return _self.totalUnclaimed;\n    }\n\n    uint256 _distributedAmount = _currentAccumulatedWeight\n      .sub(_lastAccumulatedWeight)\n      .mul(_self.totalDeposited)\n      .decode();\n\n    return _self.totalUnclaimed.add(_distributedAmount);\n  }\n}",
+  "sourcePath": "/Users/shr1ftyy/Personal/Computing/bounties/alcx/alchemix-protocol/contracts/libraries/pools/Stake.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/pools/Stake.sol",
+    "exportedSymbols": {
+      "Stake": [
+        26344
+      ]
+    },
+    "id": 26345,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 26222,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:24:48"
+      },
+      {
+        "id": 26223,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "61:33:48"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/math/Math.sol",
+        "file": "@openzeppelin/contracts/math/Math.sol",
+        "id": 26225,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 469,
+        "src": "96:59:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26224,
+              "name": "Math",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "104:4:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "id": 26227,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 1618,
+        "src": "156:76:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26226,
+              "name": "SafeERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "164:9:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/math/SafeMath.sol",
+        "file": "@openzeppelin/contracts/math/SafeMath.sol",
+        "id": 26229,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 824,
+        "src": "233:67:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26228,
+              "name": "SafeMath",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "241:8:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/FixedPointMath.sol",
+        "file": "../FixedPointMath.sol",
+        "id": 26231,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 24535,
+        "src": "302:53:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26230,
+              "name": "FixedPointMath",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "310:14:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
+        "file": "../../interfaces/IDetailedERC20.sol",
+        "id": 26233,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 23736,
+        "src": "356:67:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26232,
+              "name": "IDetailedERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "364:14:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/pools/Pool.sol",
+        "file": "./Pool.sol",
+        "id": 26235,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 26221,
+        "src": "424:32:48",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 26234,
+              "name": "Pool",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "432:4:48",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "hardhat/console.sol",
+        "file": "hardhat/console.sol",
+        "id": 26236,
+        "nodeType": "ImportDirective",
+        "scope": 26345,
+        "sourceUnit": 10533,
+        "src": "458:29:48",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 26237,
+          "nodeType": "StructuredDocumentation",
+          "src": "489:103:48",
+          "text": "@title Stake\n @dev A library which provides the Stake data struct and associated functions."
+        },
+        "fullyImplemented": true,
+        "id": 26344,
+        "linearizedBaseContracts": [
+          26344
+        ],
+        "name": "Stake",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 26240,
+            "libraryName": {
+              "contractScope": null,
+              "id": 26238,
+              "name": "FixedPointMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 24534,
+              "src": "616:14:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FixedPointMath_$24534",
+                "typeString": "library FixedPointMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "610:53:48",
+            "typeName": {
+              "contractScope": null,
+              "id": 26239,
+              "name": "FixedPointMath.FixedDecimal",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 24288,
+              "src": "635:27:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage_ptr",
+                "typeString": "struct FixedPointMath.FixedDecimal"
+              }
+            }
+          },
+          {
+            "id": 26243,
+            "libraryName": {
+              "contractScope": null,
+              "id": 26241,
+              "name": "Pool",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26220,
+              "src": "672:4:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Pool_$26220",
+                "typeString": "library Pool"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "666:25:48",
+            "typeName": {
+              "contractScope": null,
+              "id": 26242,
+              "name": "Pool.Data",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26007,
+              "src": "681:9:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                "typeString": "struct Pool.Data"
+              }
+            }
+          },
+          {
+            "id": 26246,
+            "libraryName": {
+              "contractScope": null,
+              "id": 26244,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 823,
+              "src": "700:8:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$823",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "694:27:48",
+            "typeName": {
+              "id": 26245,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "713:7:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "id": 26249,
+            "libraryName": {
+              "contractScope": null,
+              "id": 26247,
+              "name": "Stake",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26344,
+              "src": "730:5:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Stake_$26344",
+                "typeString": "library Stake"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "724:27:48",
+            "typeName": {
+              "contractScope": null,
+              "id": 26248,
+              "name": "Stake.Data",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26256,
+              "src": "740:10:48",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                "typeString": "struct Stake.Data"
+              }
+            }
+          },
+          {
+            "canonicalName": "Stake.Data",
+            "id": 26256,
+            "members": [
+              {
+                "constant": false,
+                "id": 26251,
+                "mutability": "mutable",
+                "name": "totalDeposited",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 26256,
+                "src": "773:22:48",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26250,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "773:7:48",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26253,
+                "mutability": "mutable",
+                "name": "totalUnclaimed",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 26256,
+                "src": "801:22:48",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26252,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "801:7:48",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26255,
+                "mutability": "mutable",
+                "name": "lastAccumulatedWeight",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 26256,
+                "src": "829:49:48",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage_ptr",
+                  "typeString": "struct FixedPointMath.FixedDecimal"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 26254,
+                  "name": "FixedPointMath.FixedDecimal",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 24288,
+                  "src": "829:27:48",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage_ptr",
+                    "typeString": "struct FixedPointMath.FixedDecimal"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Data",
+            "nodeType": "StructDefinition",
+            "scope": 26344,
+            "src": "755:128:48",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 26284,
+              "nodeType": "Block",
+              "src": "984:158:48",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 26273,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 26265,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26258,
+                        "src": "990:5:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                          "typeString": "struct Stake.Data storage pointer"
+                        }
+                      },
+                      "id": 26267,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "totalUnclaimed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26253,
+                      "src": "990:20:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 26270,
+                          "name": "_pool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26260,
+                          "src": "1044:5:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                            "typeString": "struct Pool.Data storage pointer"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 26271,
+                          "name": "_ctx",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26262,
+                          "src": "1051:4:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                            "typeString": "struct Pool.Context storage pointer"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                            "typeString": "struct Pool.Data storage pointer"
+                          },
+                          {
+                            "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                            "typeString": "struct Pool.Context storage pointer"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 26268,
+                          "name": "_self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26258,
+                          "src": "1013:5:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                            "typeString": "struct Stake.Data storage pointer"
+                          }
+                        },
+                        "id": 26269,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "getUpdatedTotalUnclaimed",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26343,
+                        "src": "1013:30:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_struct$_Data_$26256_storage_ptr_$_t_struct$_Data_$26007_storage_ptr_$_t_struct$_Context_$25996_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Data_$26256_storage_ptr_$",
+                          "typeString": "function (struct Stake.Data storage pointer,struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (uint256)"
+                        }
+                      },
+                      "id": 26272,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1013:43:48",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "990:66:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 26274,
+                  "nodeType": "ExpressionStatement",
+                  "src": "990:66:48"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 26282,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 26275,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26258,
+                        "src": "1062:5:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                          "typeString": "struct Stake.Data storage pointer"
+                        }
+                      },
+                      "id": 26277,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastAccumulatedWeight",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26255,
+                      "src": "1062:27:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage",
+                        "typeString": "struct FixedPointMath.FixedDecimal storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 26280,
+                          "name": "_ctx",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26262,
+                          "src": "1132:4:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                            "typeString": "struct Pool.Context storage pointer"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                            "typeString": "struct Pool.Context storage pointer"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 26278,
+                          "name": "_pool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26260,
+                          "src": "1092:5:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                            "typeString": "struct Pool.Data storage pointer"
+                          }
+                        },
+                        "id": 26279,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "getUpdatedAccumulatedRewardWeight",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26136,
+                        "src": "1092:39:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_struct$_Data_$26007_storage_ptr_$_t_struct$_Context_$25996_storage_ptr_$returns$_t_struct$_FixedDecimal_$24288_memory_ptr_$bound_to$_t_struct$_Data_$26007_storage_ptr_$",
+                          "typeString": "function (struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (struct FixedPointMath.FixedDecimal memory)"
+                        }
+                      },
+                      "id": 26281,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1092:45:48",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                        "typeString": "struct FixedPointMath.FixedDecimal memory"
+                      }
+                    },
+                    "src": "1062:75:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage",
+                      "typeString": "struct FixedPointMath.FixedDecimal storage ref"
+                    }
+                  },
+                  "id": 26283,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1062:75:48"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26285,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "update",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 26263,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26258,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26285,
+                  "src": "903:18:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                    "typeString": "struct Stake.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26257,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 26256,
+                    "src": "903:4:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                      "typeString": "struct Stake.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26260,
+                  "mutability": "mutable",
+                  "name": "_pool",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26285,
+                  "src": "923:23:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                    "typeString": "struct Pool.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26259,
+                    "name": "Pool.Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 26007,
+                    "src": "923:9:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                      "typeString": "struct Pool.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26262,
+                  "mutability": "mutable",
+                  "name": "_ctx",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26285,
+                  "src": "948:25:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                    "typeString": "struct Pool.Context"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26261,
+                    "name": "Pool.Context",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 25996,
+                    "src": "948:12:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                      "typeString": "struct Pool.Context"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "902:72:48"
+            },
+            "returnParameters": {
+              "id": 26264,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "984:0:48"
+            },
+            "scope": 26344,
+            "src": "887:255:48",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 26342,
+              "nodeType": "Block",
+              "src": "1294:527:48",
+              "statements": [
+                {
+                  "assignments": [
+                    26299
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26299,
+                      "mutability": "mutable",
+                      "name": "_currentAccumulatedWeight",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 26342,
+                      "src": "1300:60:48",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                        "typeString": "struct FixedPointMath.FixedDecimal"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 26298,
+                        "name": "FixedPointMath.FixedDecimal",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 24288,
+                        "src": "1300:27:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage_ptr",
+                          "typeString": "struct FixedPointMath.FixedDecimal"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26304,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 26302,
+                        "name": "_ctx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26291,
+                        "src": "1403:4:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                          "typeString": "struct Pool.Context storage pointer"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                          "typeString": "struct Pool.Context storage pointer"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 26300,
+                        "name": "_pool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26289,
+                        "src": "1363:5:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                          "typeString": "struct Pool.Data storage pointer"
+                        }
+                      },
+                      "id": 26301,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUpdatedAccumulatedRewardWeight",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26136,
+                      "src": "1363:39:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Data_$26007_storage_ptr_$_t_struct$_Context_$25996_storage_ptr_$returns$_t_struct$_FixedDecimal_$24288_memory_ptr_$bound_to$_t_struct$_Data_$26007_storage_ptr_$",
+                        "typeString": "function (struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (struct FixedPointMath.FixedDecimal memory)"
+                      }
+                    },
+                    "id": 26303,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1363:45:48",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                      "typeString": "struct FixedPointMath.FixedDecimal memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1300:108:48"
+                },
+                {
+                  "assignments": [
+                    26308
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26308,
+                      "mutability": "mutable",
+                      "name": "_lastAccumulatedWeight",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 26342,
+                      "src": "1414:57:48",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                        "typeString": "struct FixedPointMath.FixedDecimal"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 26307,
+                        "name": "FixedPointMath.FixedDecimal",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 24288,
+                        "src": "1414:27:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage_ptr",
+                          "typeString": "struct FixedPointMath.FixedDecimal"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26311,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 26309,
+                      "name": "_self",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26287,
+                      "src": "1474:5:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                        "typeString": "struct Stake.Data storage pointer"
+                      }
+                    },
+                    "id": 26310,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "lastAccumulatedWeight",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 26255,
+                    "src": "1474:27:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FixedDecimal_$24288_storage",
+                      "typeString": "struct FixedPointMath.FixedDecimal storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1414:87:48"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 26317,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 26314,
+                          "name": "_lastAccumulatedWeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26308,
+                          "src": "1542:22:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                            "typeString": "struct FixedPointMath.FixedDecimal memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                            "typeString": "struct FixedPointMath.FixedDecimal memory"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 26312,
+                          "name": "_currentAccumulatedWeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26299,
+                          "src": "1512:25:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                            "typeString": "struct FixedPointMath.FixedDecimal memory"
+                          }
+                        },
+                        "id": 26313,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "cmp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 24520,
+                        "src": "1512:29:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_struct$_FixedDecimal_$24288_memory_ptr_$_t_struct$_FixedDecimal_$24288_memory_ptr_$returns$_t_int256_$bound_to$_t_struct$_FixedDecimal_$24288_memory_ptr_$",
+                          "typeString": "function (struct FixedPointMath.FixedDecimal memory,struct FixedPointMath.FixedDecimal memory) pure returns (int256)"
+                        }
+                      },
+                      "id": 26315,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1512:53:48",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 26316,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1569:1:48",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1512:58:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 26322,
+                  "nodeType": "IfStatement",
+                  "src": "1508:106:48",
+                  "trueBody": {
+                    "id": 26321,
+                    "nodeType": "Block",
+                    "src": "1572:42:48",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 26318,
+                            "name": "_self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26287,
+                            "src": "1587:5:48",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                              "typeString": "struct Stake.Data storage pointer"
+                            }
+                          },
+                          "id": 26319,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "totalUnclaimed",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 26253,
+                          "src": "1587:20:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "functionReturnParameters": 26295,
+                        "id": 26320,
+                        "nodeType": "Return",
+                        "src": "1580:27:48"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "assignments": [
+                    26324
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26324,
+                      "mutability": "mutable",
+                      "name": "_distributedAmount",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 26342,
+                      "src": "1620:26:48",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 26323,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1620:7:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26335,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 26330,
+                              "name": "_self",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 26287,
+                              "src": "1721:5:48",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                                "typeString": "struct Stake.Data storage pointer"
+                              }
+                            },
+                            "id": 26331,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "totalDeposited",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 26251,
+                            "src": "1721:20:48",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 26327,
+                                "name": "_lastAccumulatedWeight",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 26308,
+                                "src": "1686:22:48",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                                  "typeString": "struct FixedPointMath.FixedDecimal memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                                  "typeString": "struct FixedPointMath.FixedDecimal memory"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 26325,
+                                "name": "_currentAccumulatedWeight",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 26299,
+                                "src": "1649:25:48",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                                  "typeString": "struct FixedPointMath.FixedDecimal memory"
+                                }
+                              },
+                              "id": 26326,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sub",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 24413,
+                              "src": "1649:36:48",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_struct$_FixedDecimal_$24288_memory_ptr_$_t_struct$_FixedDecimal_$24288_memory_ptr_$returns$_t_struct$_FixedDecimal_$24288_memory_ptr_$bound_to$_t_struct$_FixedDecimal_$24288_memory_ptr_$",
+                                "typeString": "function (struct FixedPointMath.FixedDecimal memory,struct FixedPointMath.FixedDecimal memory) pure returns (struct FixedPointMath.FixedDecimal memory)"
+                              }
+                            },
+                            "id": 26328,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1649:60:48",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                              "typeString": "struct FixedPointMath.FixedDecimal memory"
+                            }
+                          },
+                          "id": 26329,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "mul",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 24466,
+                          "src": "1649:71:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_struct$_FixedDecimal_$24288_memory_ptr_$_t_uint256_$returns$_t_struct$_FixedDecimal_$24288_memory_ptr_$bound_to$_t_struct$_FixedDecimal_$24288_memory_ptr_$",
+                            "typeString": "function (struct FixedPointMath.FixedDecimal memory,uint256) pure returns (struct FixedPointMath.FixedDecimal memory)"
+                          }
+                        },
+                        "id": 26332,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1649:93:48",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                          "typeString": "struct FixedPointMath.FixedDecimal memory"
+                        }
+                      },
+                      "id": 26333,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "decode",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24533,
+                      "src": "1649:107:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_FixedDecimal_$24288_memory_ptr_$returns$_t_uint256_$bound_to$_t_struct$_FixedDecimal_$24288_memory_ptr_$",
+                        "typeString": "function (struct FixedPointMath.FixedDecimal memory) pure returns (uint256)"
+                      }
+                    },
+                    "id": 26334,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1649:109:48",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1620:138:48"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 26339,
+                        "name": "_distributedAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26324,
+                        "src": "1797:18:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 26336,
+                          "name": "_self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26287,
+                          "src": "1772:5:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                            "typeString": "struct Stake.Data storage pointer"
+                          }
+                        },
+                        "id": 26337,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "totalUnclaimed",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26253,
+                        "src": "1772:20:48",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 26338,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 650,
+                      "src": "1772:24:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                        "typeString": "function (uint256,uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 26340,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1772:44:48",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 26295,
+                  "id": 26341,
+                  "nodeType": "Return",
+                  "src": "1765:51:48"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26343,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUpdatedTotalUnclaimed",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 26292,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26287,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26343,
+                  "src": "1180:18:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                    "typeString": "struct Stake.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26286,
+                    "name": "Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 26256,
+                    "src": "1180:4:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$26256_storage_ptr",
+                      "typeString": "struct Stake.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26289,
+                  "mutability": "mutable",
+                  "name": "_pool",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26343,
+                  "src": "1200:23:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                    "typeString": "struct Pool.Data"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26288,
+                    "name": "Pool.Data",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 26007,
+                    "src": "1200:9:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                      "typeString": "struct Pool.Data"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26291,
+                  "mutability": "mutable",
+                  "name": "_ctx",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26343,
+                  "src": "1225:25:48",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                    "typeString": "struct Pool.Context"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26290,
+                    "name": "Pool.Context",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 25996,
+                    "src": "1225:12:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                      "typeString": "struct Pool.Context"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1179:72:48"
+            },
+            "returnParameters": {
+              "id": 26295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26294,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 26343,
+                  "src": "1283:7:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26293,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1283:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1282:9:48"
+            },
+            "scope": 26344,
+            "src": "1146:675:48",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 26345,
+        "src": "592:1231:48"
+      }
+    ],
+    "src": "36:1787:48"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/libraries/pools/Stake.sol",
+      "exportedSymbols": {
+        "Stake": [
+          26344
+        ]
+      },
+      "license": "GPL-3.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 26222,
+        "name": "PragmaDirective",
+        "src": "36:24:48"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 26223,
+        "name": "PragmaDirective",
+        "src": "61:33:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 469,
+          "absolutePath": "@openzeppelin/contracts/math/Math.sol",
+          "file": "@openzeppelin/contracts/math/Math.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "Math"
+                },
+                "id": 26224,
+                "name": "Identifier",
+                "src": "104:4:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26225,
+        "name": "ImportDirective",
+        "src": "96:59:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1618,
+          "absolutePath": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+          "file": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "SafeERC20"
+                },
+                "id": 26226,
+                "name": "Identifier",
+                "src": "164:9:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26227,
+        "name": "ImportDirective",
+        "src": "156:76:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 824,
+          "absolutePath": "@openzeppelin/contracts/math/SafeMath.sol",
+          "file": "@openzeppelin/contracts/math/SafeMath.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "SafeMath"
+                },
+                "id": 26228,
+                "name": "Identifier",
+                "src": "241:8:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26229,
+        "name": "ImportDirective",
+        "src": "233:67:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 24535,
+          "absolutePath": "project:/contracts/libraries/FixedPointMath.sol",
+          "file": "../FixedPointMath.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "FixedPointMath"
+                },
+                "id": 26230,
+                "name": "Identifier",
+                "src": "310:14:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26231,
+        "name": "ImportDirective",
+        "src": "302:53:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 23736,
+          "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
+          "file": "../../interfaces/IDetailedERC20.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "IDetailedERC20"
+                },
+                "id": 26232,
+                "name": "Identifier",
+                "src": "364:14:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26233,
+        "name": "ImportDirective",
+        "src": "356:67:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 26221,
+          "absolutePath": "project:/contracts/libraries/pools/Pool.sol",
+          "file": "./Pool.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "Pool"
+                },
+                "id": 26234,
+                "name": "Identifier",
+                "src": "432:4:48"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 26235,
+        "name": "ImportDirective",
+        "src": "424:32:48"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 10533,
+          "absolutePath": "hardhat/console.sol",
+          "file": "hardhat/console.sol",
+          "scope": 26345,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 26236,
+        "name": "ImportDirective",
+        "src": "458:29:48"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            26344
+          ],
+          "name": "Stake",
+          "scope": 26345
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Stake\n @dev A library which provides the Stake data struct and associated functions."
+            },
+            "id": 26237,
+            "name": "StructuredDocumentation",
+            "src": "489:103:48"
+          },
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "FixedPointMath",
+                  "referencedDeclaration": 24534,
+                  "type": "library FixedPointMath"
+                },
+                "id": 26238,
+                "name": "UserDefinedTypeName",
+                "src": "616:14:48"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "FixedPointMath.FixedDecimal",
+                  "referencedDeclaration": 24288,
+                  "type": "struct FixedPointMath.FixedDecimal"
+                },
+                "id": 26239,
+                "name": "UserDefinedTypeName",
+                "src": "635:27:48"
+              }
+            ],
+            "id": 26240,
+            "name": "UsingForDirective",
+            "src": "610:53:48"
+          },
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Pool",
+                  "referencedDeclaration": 26220,
+                  "type": "library Pool"
+                },
+                "id": 26241,
+                "name": "UserDefinedTypeName",
+                "src": "672:4:48"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Pool.Data",
+                  "referencedDeclaration": 26007,
+                  "type": "struct Pool.Data"
+                },
+                "id": 26242,
+                "name": "UserDefinedTypeName",
+                "src": "681:9:48"
+              }
+            ],
+            "id": 26243,
+            "name": "UsingForDirective",
+            "src": "666:25:48"
+          },
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "SafeMath",
+                  "referencedDeclaration": 823,
+                  "type": "library SafeMath"
+                },
+                "id": 26244,
+                "name": "UserDefinedTypeName",
+                "src": "700:8:48"
+              },
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 26245,
+                "name": "ElementaryTypeName",
+                "src": "713:7:48"
+              }
+            ],
+            "id": 26246,
+            "name": "UsingForDirective",
+            "src": "694:27:48"
+          },
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Stake",
+                  "referencedDeclaration": 26344,
+                  "type": "library Stake"
+                },
+                "id": 26247,
+                "name": "UserDefinedTypeName",
+                "src": "730:5:48"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Stake.Data",
+                  "referencedDeclaration": 26256,
+                  "type": "struct Stake.Data"
+                },
+                "id": 26248,
+                "name": "UserDefinedTypeName",
+                "src": "740:10:48"
+              }
+            ],
+            "id": 26249,
+            "name": "UsingForDirective",
+            "src": "724:27:48"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Stake.Data",
+              "name": "Data",
+              "scope": 26344,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "totalDeposited",
+                  "overrides": null,
+                  "scope": 26256,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 26250,
+                    "name": "ElementaryTypeName",
+                    "src": "773:7:48"
+                  }
+                ],
+                "id": 26251,
+                "name": "VariableDeclaration",
+                "src": "773:22:48"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "totalUnclaimed",
+                  "overrides": null,
+                  "scope": 26256,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 26252,
+                    "name": "ElementaryTypeName",
+                    "src": "801:7:48"
+                  }
+                ],
+                "id": 26253,
+                "name": "VariableDeclaration",
+                "src": "801:22:48"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "lastAccumulatedWeight",
+                  "overrides": null,
+                  "scope": 26256,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "struct FixedPointMath.FixedDecimal",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "FixedPointMath.FixedDecimal",
+                      "referencedDeclaration": 24288,
+                      "type": "struct FixedPointMath.FixedDecimal"
+                    },
+                    "id": 26254,
+                    "name": "UserDefinedTypeName",
+                    "src": "829:27:48"
+                  }
+                ],
+                "id": 26255,
+                "name": "VariableDeclaration",
+                "src": "829:49:48"
+              }
+            ],
+            "id": 26256,
+            "name": "StructDefinition",
+            "src": "755:128:48"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "update",
+              "overrides": null,
+              "scope": 26344,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_self",
+                      "overrides": null,
+                      "scope": 26285,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Stake.Data",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Data",
+                          "referencedDeclaration": 26256,
+                          "type": "struct Stake.Data"
+                        },
+                        "id": 26257,
+                        "name": "UserDefinedTypeName",
+                        "src": "903:4:48"
+                      }
+                    ],
+                    "id": 26258,
+                    "name": "VariableDeclaration",
+                    "src": "903:18:48"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_pool",
+                      "overrides": null,
+                      "scope": 26285,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Pool.Data",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Pool.Data",
+                          "referencedDeclaration": 26007,
+                          "type": "struct Pool.Data"
+                        },
+                        "id": 26259,
+                        "name": "UserDefinedTypeName",
+                        "src": "923:9:48"
+                      }
+                    ],
+                    "id": 26260,
+                    "name": "VariableDeclaration",
+                    "src": "923:23:48"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_ctx",
+                      "overrides": null,
+                      "scope": 26285,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Pool.Context",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Pool.Context",
+                          "referencedDeclaration": 25996,
+                          "type": "struct Pool.Context"
+                        },
+                        "id": 26261,
+                        "name": "UserDefinedTypeName",
+                        "src": "948:12:48"
+                      }
+                    ],
+                    "id": 26262,
+                    "name": "VariableDeclaration",
+                    "src": "948:25:48"
+                  }
+                ],
+                "id": 26263,
+                "name": "ParameterList",
+                "src": "902:72:48"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 26264,
+                "name": "ParameterList",
+                "src": "984:0:48"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "totalUnclaimed",
+                              "referencedDeclaration": 26253,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26258,
+                                  "type": "struct Stake.Data storage pointer",
+                                  "value": "_self"
+                                },
+                                "id": 26265,
+                                "name": "Identifier",
+                                "src": "990:5:48"
+                              }
+                            ],
+                            "id": 26267,
+                            "name": "MemberAccess",
+                            "src": "990:20:48"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_struct$_Data_$26007_storage_ptr",
+                                      "typeString": "struct Pool.Data storage pointer"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                                      "typeString": "struct Pool.Context storage pointer"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "getUpdatedTotalUnclaimed",
+                                  "referencedDeclaration": 26343,
+                                  "type": "function (struct Stake.Data storage pointer,struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (uint256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 26258,
+                                      "type": "struct Stake.Data storage pointer",
+                                      "value": "_self"
+                                    },
+                                    "id": 26268,
+                                    "name": "Identifier",
+                                    "src": "1013:5:48"
+                                  }
+                                ],
+                                "id": 26269,
+                                "name": "MemberAccess",
+                                "src": "1013:30:48"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26260,
+                                  "type": "struct Pool.Data storage pointer",
+                                  "value": "_pool"
+                                },
+                                "id": 26270,
+                                "name": "Identifier",
+                                "src": "1044:5:48"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26262,
+                                  "type": "struct Pool.Context storage pointer",
+                                  "value": "_ctx"
+                                },
+                                "id": 26271,
+                                "name": "Identifier",
+                                "src": "1051:4:48"
+                              }
+                            ],
+                            "id": 26272,
+                            "name": "FunctionCall",
+                            "src": "1013:43:48"
+                          }
+                        ],
+                        "id": 26273,
+                        "name": "Assignment",
+                        "src": "990:66:48"
+                      }
+                    ],
+                    "id": 26274,
+                    "name": "ExpressionStatement",
+                    "src": "990:66:48"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct FixedPointMath.FixedDecimal storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "lastAccumulatedWeight",
+                              "referencedDeclaration": 26255,
+                              "type": "struct FixedPointMath.FixedDecimal storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26258,
+                                  "type": "struct Stake.Data storage pointer",
+                                  "value": "_self"
+                                },
+                                "id": 26275,
+                                "name": "Identifier",
+                                "src": "1062:5:48"
+                              }
+                            ],
+                            "id": 26277,
+                            "name": "MemberAccess",
+                            "src": "1062:27:48"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "struct FixedPointMath.FixedDecimal memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                                      "typeString": "struct Pool.Context storage pointer"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "getUpdatedAccumulatedRewardWeight",
+                                  "referencedDeclaration": 26136,
+                                  "type": "function (struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (struct FixedPointMath.FixedDecimal memory)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 26260,
+                                      "type": "struct Pool.Data storage pointer",
+                                      "value": "_pool"
+                                    },
+                                    "id": 26278,
+                                    "name": "Identifier",
+                                    "src": "1092:5:48"
+                                  }
+                                ],
+                                "id": 26279,
+                                "name": "MemberAccess",
+                                "src": "1092:39:48"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26262,
+                                  "type": "struct Pool.Context storage pointer",
+                                  "value": "_ctx"
+                                },
+                                "id": 26280,
+                                "name": "Identifier",
+                                "src": "1132:4:48"
+                              }
+                            ],
+                            "id": 26281,
+                            "name": "FunctionCall",
+                            "src": "1092:45:48"
+                          }
+                        ],
+                        "id": 26282,
+                        "name": "Assignment",
+                        "src": "1062:75:48"
+                      }
+                    ],
+                    "id": 26283,
+                    "name": "ExpressionStatement",
+                    "src": "1062:75:48"
+                  }
+                ],
+                "id": 26284,
+                "name": "Block",
+                "src": "984:158:48"
+              }
+            ],
+            "id": 26285,
+            "name": "FunctionDefinition",
+            "src": "887:255:48"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUpdatedTotalUnclaimed",
+              "overrides": null,
+              "scope": 26344,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_self",
+                      "overrides": null,
+                      "scope": 26343,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Stake.Data",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Data",
+                          "referencedDeclaration": 26256,
+                          "type": "struct Stake.Data"
+                        },
+                        "id": 26286,
+                        "name": "UserDefinedTypeName",
+                        "src": "1180:4:48"
+                      }
+                    ],
+                    "id": 26287,
+                    "name": "VariableDeclaration",
+                    "src": "1180:18:48"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_pool",
+                      "overrides": null,
+                      "scope": 26343,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Pool.Data",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Pool.Data",
+                          "referencedDeclaration": 26007,
+                          "type": "struct Pool.Data"
+                        },
+                        "id": 26288,
+                        "name": "UserDefinedTypeName",
+                        "src": "1200:9:48"
+                      }
+                    ],
+                    "id": 26289,
+                    "name": "VariableDeclaration",
+                    "src": "1200:23:48"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_ctx",
+                      "overrides": null,
+                      "scope": 26343,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct Pool.Context",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Pool.Context",
+                          "referencedDeclaration": 25996,
+                          "type": "struct Pool.Context"
+                        },
+                        "id": 26290,
+                        "name": "UserDefinedTypeName",
+                        "src": "1225:12:48"
+                      }
+                    ],
+                    "id": 26291,
+                    "name": "VariableDeclaration",
+                    "src": "1225:25:48"
+                  }
+                ],
+                "id": 26292,
+                "name": "ParameterList",
+                "src": "1179:72:48"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 26343,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 26293,
+                        "name": "ElementaryTypeName",
+                        "src": "1283:7:48"
+                      }
+                    ],
+                    "id": 26294,
+                    "name": "VariableDeclaration",
+                    "src": "1283:7:48"
+                  }
+                ],
+                "id": 26295,
+                "name": "ParameterList",
+                "src": "1282:9:48"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        26299
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "_currentAccumulatedWeight",
+                          "overrides": null,
+                          "scope": 26342,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct FixedPointMath.FixedDecimal",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "FixedPointMath.FixedDecimal",
+                              "referencedDeclaration": 24288,
+                              "type": "struct FixedPointMath.FixedDecimal"
+                            },
+                            "id": 26298,
+                            "name": "UserDefinedTypeName",
+                            "src": "1300:27:48"
+                          }
+                        ],
+                        "id": 26299,
+                        "name": "VariableDeclaration",
+                        "src": "1300:60:48"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "struct FixedPointMath.FixedDecimal memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_Context_$25996_storage_ptr",
+                                  "typeString": "struct Pool.Context storage pointer"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "getUpdatedAccumulatedRewardWeight",
+                              "referencedDeclaration": 26136,
+                              "type": "function (struct Pool.Data storage pointer,struct Pool.Context storage pointer) view returns (struct FixedPointMath.FixedDecimal memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26289,
+                                  "type": "struct Pool.Data storage pointer",
+                                  "value": "_pool"
+                                },
+                                "id": 26300,
+                                "name": "Identifier",
+                                "src": "1363:5:48"
+                              }
+                            ],
+                            "id": 26301,
+                            "name": "MemberAccess",
+                            "src": "1363:39:48"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 26291,
+                              "type": "struct Pool.Context storage pointer",
+                              "value": "_ctx"
+                            },
+                            "id": 26302,
+                            "name": "Identifier",
+                            "src": "1403:4:48"
+                          }
+                        ],
+                        "id": 26303,
+                        "name": "FunctionCall",
+                        "src": "1363:45:48"
+                      }
+                    ],
+                    "id": 26304,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1300:108:48"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        26308
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "_lastAccumulatedWeight",
+                          "overrides": null,
+                          "scope": 26342,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct FixedPointMath.FixedDecimal",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "FixedPointMath.FixedDecimal",
+                              "referencedDeclaration": 24288,
+                              "type": "struct FixedPointMath.FixedDecimal"
+                            },
+                            "id": 26307,
+                            "name": "UserDefinedTypeName",
+                            "src": "1414:27:48"
+                          }
+                        ],
+                        "id": 26308,
+                        "name": "VariableDeclaration",
+                        "src": "1414:57:48"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "lastAccumulatedWeight",
+                          "referencedDeclaration": 26255,
+                          "type": "struct FixedPointMath.FixedDecimal storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 26287,
+                              "type": "struct Stake.Data storage pointer",
+                              "value": "_self"
+                            },
+                            "id": 26309,
+                            "name": "Identifier",
+                            "src": "1474:5:48"
+                          }
+                        ],
+                        "id": 26310,
+                        "name": "MemberAccess",
+                        "src": "1474:27:48"
+                      }
+                    ],
+                    "id": 26311,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1414:87:48"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "int256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                                      "typeString": "struct FixedPointMath.FixedDecimal memory"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "cmp",
+                                  "referencedDeclaration": 24520,
+                                  "type": "function (struct FixedPointMath.FixedDecimal memory,struct FixedPointMath.FixedDecimal memory) pure returns (int256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 26299,
+                                      "type": "struct FixedPointMath.FixedDecimal memory",
+                                      "value": "_currentAccumulatedWeight"
+                                    },
+                                    "id": 26312,
+                                    "name": "Identifier",
+                                    "src": "1512:25:48"
+                                  }
+                                ],
+                                "id": 26313,
+                                "name": "MemberAccess",
+                                "src": "1512:29:48"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 26308,
+                                  "type": "struct FixedPointMath.FixedDecimal memory",
+                                  "value": "_lastAccumulatedWeight"
+                                },
+                                "id": 26314,
+                                "name": "Identifier",
+                                "src": "1542:22:48"
+                              }
+                            ],
+                            "id": 26315,
+                            "name": "FunctionCall",
+                            "src": "1512:53:48"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 26316,
+                            "name": "Literal",
+                            "src": "1569:1:48"
+                          }
+                        ],
+                        "id": 26317,
+                        "name": "BinaryOperation",
+                        "src": "1512:58:48"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 26295
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "totalUnclaimed",
+                                  "referencedDeclaration": 26253,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 26287,
+                                      "type": "struct Stake.Data storage pointer",
+                                      "value": "_self"
+                                    },
+                                    "id": 26318,
+                                    "name": "Identifier",
+                                    "src": "1587:5:48"
+                                  }
+                                ],
+                                "id": 26319,
+                                "name": "MemberAccess",
+                                "src": "1587:20:48"
+                              }
+                            ],
+                            "id": 26320,
+                            "name": "Return",
+                            "src": "1580:27:48"
+                          }
+                        ],
+                        "id": 26321,
+                        "name": "Block",
+                        "src": "1572:42:48"
+                      }
+                    ],
+                    "id": 26322,
+                    "name": "IfStatement",
+                    "src": "1508:106:48"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        26324
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "_distributedAmount",
+                          "overrides": null,
+                          "scope": 26342,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 26323,
+                            "name": "ElementaryTypeName",
+                            "src": "1620:7:48"
+                          }
+                        ],
+                        "id": 26324,
+                        "name": "VariableDeclaration",
+                        "src": "1620:26:48"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "decode",
+                              "referencedDeclaration": 24533,
+                              "type": "function (struct FixedPointMath.FixedDecimal memory) pure returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "struct FixedPointMath.FixedDecimal memory",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "mul",
+                                      "referencedDeclaration": 24466,
+                                      "type": "function (struct FixedPointMath.FixedDecimal memory,uint256) pure returns (struct FixedPointMath.FixedDecimal memory)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "isStructConstructorCall": false,
+                                          "lValueRequested": false,
+                                          "names": [
+                                            null
+                                          ],
+                                          "tryCall": false,
+                                          "type": "struct FixedPointMath.FixedDecimal memory",
+                                          "type_conversion": false
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": [
+                                                {
+                                                  "typeIdentifier": "t_struct$_FixedDecimal_$24288_memory_ptr",
+                                                  "typeString": "struct FixedPointMath.FixedDecimal memory"
+                                                }
+                                              ],
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "member_name": "sub",
+                                              "referencedDeclaration": 24413,
+                                              "type": "function (struct FixedPointMath.FixedDecimal memory,struct FixedPointMath.FixedDecimal memory) pure returns (struct FixedPointMath.FixedDecimal memory)"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 26299,
+                                                  "type": "struct FixedPointMath.FixedDecimal memory",
+                                                  "value": "_currentAccumulatedWeight"
+                                                },
+                                                "id": 26325,
+                                                "name": "Identifier",
+                                                "src": "1649:25:48"
+                                              }
+                                            ],
+                                            "id": 26326,
+                                            "name": "MemberAccess",
+                                            "src": "1649:36:48"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 26308,
+                                              "type": "struct FixedPointMath.FixedDecimal memory",
+                                              "value": "_lastAccumulatedWeight"
+                                            },
+                                            "id": 26327,
+                                            "name": "Identifier",
+                                            "src": "1686:22:48"
+                                          }
+                                        ],
+                                        "id": 26328,
+                                        "name": "FunctionCall",
+                                        "src": "1649:60:48"
+                                      }
+                                    ],
+                                    "id": 26329,
+                                    "name": "MemberAccess",
+                                    "src": "1649:71:48"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "totalDeposited",
+                                      "referencedDeclaration": 26251,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 26287,
+                                          "type": "struct Stake.Data storage pointer",
+                                          "value": "_self"
+                                        },
+                                        "id": 26330,
+                                        "name": "Identifier",
+                                        "src": "1721:5:48"
+                                      }
+                                    ],
+                                    "id": 26331,
+                                    "name": "MemberAccess",
+                                    "src": "1721:20:48"
+                                  }
+                                ],
+                                "id": 26332,
+                                "name": "FunctionCall",
+                                "src": "1649:93:48"
+                              }
+                            ],
+                            "id": 26333,
+                            "name": "MemberAccess",
+                            "src": "1649:107:48"
+                          }
+                        ],
+                        "id": 26334,
+                        "name": "FunctionCall",
+                        "src": "1649:109:48"
+                      }
+                    ],
+                    "id": 26335,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1620:138:48"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 26295
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "add",
+                              "referencedDeclaration": 650,
+                              "type": "function (uint256,uint256) pure returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "totalUnclaimed",
+                                  "referencedDeclaration": 26253,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 26287,
+                                      "type": "struct Stake.Data storage pointer",
+                                      "value": "_self"
+                                    },
+                                    "id": 26336,
+                                    "name": "Identifier",
+                                    "src": "1772:5:48"
+                                  }
+                                ],
+                                "id": 26337,
+                                "name": "MemberAccess",
+                                "src": "1772:20:48"
+                              }
+                            ],
+                            "id": 26338,
+                            "name": "MemberAccess",
+                            "src": "1772:24:48"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 26324,
+                              "type": "uint256",
+                              "value": "_distributedAmount"
+                            },
+                            "id": 26339,
+                            "name": "Identifier",
+                            "src": "1797:18:48"
+                          }
+                        ],
+                        "id": 26340,
+                        "name": "FunctionCall",
+                        "src": "1772:44:48"
+                      }
+                    ],
+                    "id": 26341,
+                    "name": "Return",
+                    "src": "1765:51:48"
+                  }
+                ],
+                "id": 26342,
+                "name": "Block",
+                "src": "1294:527:48"
+              }
+            ],
+            "id": 26343,
+            "name": "FunctionDefinition",
+            "src": "1146:675:48"
+          }
+        ],
+        "id": 26344,
+        "name": "ContractDefinition",
+        "src": "592:1231:48"
+      }
+    ],
+    "id": 26345,
+    "name": "SourceUnit",
+    "src": "36:1787:48"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-11T09:34:07.518Z",
+  "devdoc": {
+    "details": "A library which provides the Stake data struct and associated functions.",
+    "kind": "dev",
+    "methods": {},
+    "title": "Stake",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
