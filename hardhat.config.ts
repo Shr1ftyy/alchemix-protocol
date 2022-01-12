@@ -2,8 +2,14 @@ import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
 import "hardhat-typechain";
 import "solidity-coverage";
+// var HDWalletProvider = require("@truffle/hdwallet-provider");
 
 require('dotenv').config()
+
+const accounts = {
+  mnemonic: process.env.MNEMONIC || "test test test test test test test test test test test junk",
+  accountsBalance: "20000000000000000000000",
+}
 
 export default {
   namedAccounts: {
@@ -33,16 +39,20 @@ export default {
   },
   networks: {
     coverage: {
+      accounts,
       url: "http://localhost:8545",
-      gas: 20000000,
-    },
-    hardhat: {
       chainId: 1337,
-      allowUnlimitedContractSize: false,
-      gasLimit: 6721975,
+      gas: 6721975,
       // gas: 20000000, 
       gasPrice: 20000000000,
-      // baseFeePerGas: 21,
+    },
+    hardhat: {
+      accounts,
+      chainId: 1337,
+      allowUnlimitedContractSize: false,
+      gas: 6721975,
+      // gas: 20000000, 
+      gasPrice: 20000000000,
       // forking:{
       //   url: "https://rpc.ftm.tools/"
       // }

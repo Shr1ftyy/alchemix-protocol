@@ -12,7 +12,7 @@ module.exports = async function (deployer) {
   console.log('withdraw');
   await AlcFTM.withdraw.sendTransaction(web3.utils.toWei('1'), true);
   console.log('mint alFTM');
-  await AlcFTM.mint(web3.utils.toWei('0.69'));
-  await AlcFTM.repay(web3.utils.toWei('0'), web3.utils.toWei('0.5'), false);
+  await AlcFTM.mint(web3.utils.toWei('0.069'));
+  // await AlcFTM.repay(web3.utils.toWei('0'), web3.utils.toWei('0.5'), false);
   
 }

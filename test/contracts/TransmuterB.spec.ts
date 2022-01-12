@@ -106,7 +106,7 @@ describe("TransmuterB", () => {
         token.address
       )) as VaultAdapterMockWithIndirection;
     // [TODO]
-    console.log("SETTING PAUSE AS FALSE BY DEFAULT") 
+    // console.log("SETTING PAUSE AS FALSE BY DEFAULT") 
     await transmuter.connect(governance).setPause(false);
     await transmuter.connect(governance).setKeepers(keeprs, keeprStates);
     await transmuter.connect(governance).setRewards(await rewards.getAddress())

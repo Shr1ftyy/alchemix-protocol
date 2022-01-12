@@ -47,7 +47,6 @@ module.exports = {
      network_id: "1337",       // Any network (default: none)
      gas: 6721975,
 		 gasPrice: 20000000000,
-		 networkCheckTimeout: 999999
     },
     // Another network with more advanced options...
     // advanced: {
@@ -91,7 +90,7 @@ module.exports = {
          enabled: true,
          runs: 999999 
        },
-       evmVersion: "byzantium"
+       evmVersion: "istanbul"
       }
     }
   },

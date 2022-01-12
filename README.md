@@ -41,4 +41,4 @@ Ensure that the `.env` has the correct contract addresses prior to running the s
 
 `npx truffle exec live_test.js`
 
-A Documentation w/ changes made vs. Alchemix's main fork can be seen inside DOCUMENTATION.md
+A Documentation w/ changes made vs. Alchemix's master branch can be seen inside DOCUMENTATION.md
