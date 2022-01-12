@@ -117,11 +117,13 @@ module.exports = async function (deployer) {
   console.log('setting pause to false for alFTM transmuter')
   await transFTM.setPause(false);
 
-  console.log('whitelist Alchemists in alToken contracts')
+  console.log('whitelist Alchemists in alToken and Transmuter contracts')
+  await trans.setWhitelist(AlUSD.address, true)
+  await transFTM.setWhitelist(AlFTM.address, true)
   await AL_USD.setWhitelist(AlUSD.address, true)
   await AL_FTM.setWhitelist(AlFTM.address, true)
   console.log('set ceilings for minting')
-  await AL_USD.setCeiling(AlUSD.address, web3.utils.toWei('100'))
-  await AL_FTM.setCeiling(AlFTM.address, web3.utils.toWei('100'))
+  await AL_USD.setCeiling(AlUSD.address, web3.utils.toWei('1000'))
+  await AL_FTM.setCeiling(AlFTM.address, web3.utils.toWei('1000'))
 
 };

@@ -15,7 +15,7 @@ import {IDetailedERC20} from "./interfaces/IDetailedERC20.sol";
 /// Initially, the contract deployer is given both the admin and minter role. This allows them to pre-mine tokens,
 /// transfer admin to a timelock contract, and lastly, grant the staking pools the minter role. After this is done,
 /// the deployer must revoke their admin role and minter role.
-contract AlEth is AccessControl, ERC20("Alchemix ETH", "alETH") {
+contract AlEth is AccessControl, ERC20("Alchemix Fantom", "alFTM") {
   using SafeERC20 for ERC20;
 
   /// @dev The identifier of the role which maintains other roles.
