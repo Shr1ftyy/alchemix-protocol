@@ -494,7 +494,7 @@ contract Alchemist is  ReentrancyGuard {
   ///
   /// This function reverts if a deposit into the CDP was made in the same block. This is to prevent flash loan attacks
   /// on other internal or external systems.
-  ///
+  //
   /// @param _amount the amount of collateral to withdraw.
   function withdraw(uint256 _amount) external nonReentrant noContractAllowed expectInitialized returns (uint256, uint256) {
 
