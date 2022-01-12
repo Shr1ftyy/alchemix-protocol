@@ -228,15 +228,15 @@
     "absolutePath": "project:/contracts/interfaces/IERC20Burnable.sol",
     "exportedSymbols": {
       "IERC20Burnable": [
-        23753
+        22607
       ]
     },
-    "id": 23754,
+    "id": 22608,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 23737,
+        "id": 22591,
         "literals": [
           "solidity",
           "^",
@@ -244,16 +244,16 @@
           ".8"
         ],
         "nodeType": "PragmaDirective",
-        "src": "36:23:33"
+        "src": "36:23:30"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "id": 23738,
+        "id": 22592,
         "nodeType": "ImportDirective",
-        "scope": 23754,
+        "scope": 22608,
         "sourceUnit": 1405,
-        "src": "61:56:33",
+        "src": "61:56:30",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -264,19 +264,19 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 23739,
+              "id": 22593,
               "name": "IERC20",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 1404,
-              "src": "147:6:33",
+              "src": "147:6:30",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_IERC20_$1404",
                 "typeString": "contract IERC20"
               }
             },
-            "id": 23740,
+            "id": 22594,
             "nodeType": "InheritanceSpecifier",
-            "src": "147:6:33"
+            "src": "147:6:30"
           }
         ],
         "contractDependencies": [
@@ -285,9 +285,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 23753,
+        "id": 22607,
         "linearizedBaseContracts": [
-          23753,
+          22607,
           1404
         ],
         "name": "IERC20Burnable",
@@ -297,7 +297,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "42966c68",
-            "id": 23745,
+            "id": 22599,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -305,18 +305,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23743,
+              "id": 22597,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23742,
+                  "id": 22596,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23745,
-                  "src": "172:14:33",
+                  "scope": 22599,
+                  "src": "172:14:30",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -324,10 +324,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23741,
+                    "id": 22595,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "172:7:33",
+                    "src": "172:7:30",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -337,16 +337,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "171:16:33"
+              "src": "171:16:30"
             },
             "returnParameters": {
-              "id": 23744,
+              "id": 22598,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "196:0:33"
+              "src": "196:0:30"
             },
-            "scope": 23753,
-            "src": "158:39:33",
+            "scope": 22607,
+            "src": "158:39:30",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -355,7 +355,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "79cc6790",
-            "id": 23752,
+            "id": 22606,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -363,18 +363,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23750,
+              "id": 22604,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23747,
+                  "id": 22601,
                   "mutability": "mutable",
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23752,
-                  "src": "218:15:33",
+                  "scope": 22606,
+                  "src": "218:15:30",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -382,10 +382,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 23746,
+                    "id": 22600,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:7:33",
+                    "src": "218:7:30",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -397,13 +397,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 23749,
+                  "id": 22603,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23752,
-                  "src": "235:14:33",
+                  "scope": 22606,
+                  "src": "235:14:30",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -411,10 +411,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23748,
+                    "id": 22602,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "235:7:33",
+                    "src": "235:7:30",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -424,33 +424,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:33:33"
+              "src": "217:33:30"
             },
             "returnParameters": {
-              "id": 23751,
+              "id": 22605,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "259:0:33"
+              "src": "259:0:30"
             },
-            "scope": 23753,
-            "src": "200:60:33",
+            "scope": 22607,
+            "src": "200:60:30",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 23754,
-        "src": "119:143:33"
+        "scope": 22608,
+        "src": "119:143:30"
       }
     ],
-    "src": "36:226:33"
+    "src": "36:226:30"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/interfaces/IERC20Burnable.sol",
       "exportedSymbols": {
         "IERC20Burnable": [
-          23753
+          22607
         ]
       },
       "license": "GPL-3.0"
@@ -465,24 +465,24 @@
             ".8"
           ]
         },
-        "id": 23737,
+        "id": 22591,
         "name": "PragmaDirective",
-        "src": "36:23:33"
+        "src": "36:23:30"
       },
       {
         "attributes": {
           "SourceUnit": 1405,
           "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
           "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-          "scope": 23754,
+          "scope": 22608,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 23738,
+        "id": 22592,
         "name": "ImportDirective",
-        "src": "61:56:33"
+        "src": "61:56:30"
       },
       {
         "attributes": {
@@ -494,11 +494,11 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            23753,
+            22607,
             1404
           ],
           "name": "IERC20Burnable",
-          "scope": 23754
+          "scope": 22608
         },
         "children": [
           {
@@ -513,14 +513,14 @@
                   "referencedDeclaration": 1404,
                   "type": "contract IERC20"
                 },
-                "id": 23739,
+                "id": 22593,
                 "name": "UserDefinedTypeName",
-                "src": "147:6:33"
+                "src": "147:6:30"
               }
             ],
-            "id": 23740,
+            "id": 22594,
             "name": "InheritanceSpecifier",
-            "src": "147:6:33"
+            "src": "147:6:30"
           },
           {
             "attributes": {
@@ -535,7 +535,7 @@
               ],
               "name": "burn",
               "overrides": null,
-              "scope": 23753,
+              "scope": 22607,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -549,7 +549,7 @@
                       "mutability": "mutable",
                       "name": "amount",
                       "overrides": null,
-                      "scope": 23745,
+                      "scope": 22599,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -562,19 +562,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23741,
+                        "id": 22595,
                         "name": "ElementaryTypeName",
-                        "src": "172:7:33"
+                        "src": "172:7:30"
                       }
                     ],
-                    "id": 23742,
+                    "id": 22596,
                     "name": "VariableDeclaration",
-                    "src": "172:14:33"
+                    "src": "172:14:30"
                   }
                 ],
-                "id": 23743,
+                "id": 22597,
                 "name": "ParameterList",
-                "src": "171:16:33"
+                "src": "171:16:30"
               },
               {
                 "attributes": {
@@ -583,14 +583,14 @@
                   ]
                 },
                 "children": [],
-                "id": 23744,
+                "id": 22598,
                 "name": "ParameterList",
-                "src": "196:0:33"
+                "src": "196:0:30"
               }
             ],
-            "id": 23745,
+            "id": 22599,
             "name": "FunctionDefinition",
-            "src": "158:39:33"
+            "src": "158:39:30"
           },
           {
             "attributes": {
@@ -605,7 +605,7 @@
               ],
               "name": "burnFrom",
               "overrides": null,
-              "scope": 23753,
+              "scope": 22607,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -619,7 +619,7 @@
                       "mutability": "mutable",
                       "name": "account",
                       "overrides": null,
-                      "scope": 23752,
+                      "scope": 22606,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -633,14 +633,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 23746,
+                        "id": 22600,
                         "name": "ElementaryTypeName",
-                        "src": "218:7:33"
+                        "src": "218:7:30"
                       }
                     ],
-                    "id": 23747,
+                    "id": 22601,
                     "name": "VariableDeclaration",
-                    "src": "218:15:33"
+                    "src": "218:15:30"
                   },
                   {
                     "attributes": {
@@ -648,7 +648,7 @@
                       "mutability": "mutable",
                       "name": "amount",
                       "overrides": null,
-                      "scope": 23752,
+                      "scope": 22606,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -661,19 +661,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23748,
+                        "id": 22602,
                         "name": "ElementaryTypeName",
-                        "src": "235:7:33"
+                        "src": "235:7:30"
                       }
                     ],
-                    "id": 23749,
+                    "id": 22603,
                     "name": "VariableDeclaration",
-                    "src": "235:14:33"
+                    "src": "235:14:30"
                   }
                 ],
-                "id": 23750,
+                "id": 22604,
                 "name": "ParameterList",
-                "src": "217:33:33"
+                "src": "217:33:30"
               },
               {
                 "attributes": {
@@ -682,24 +682,24 @@
                   ]
                 },
                 "children": [],
-                "id": 23751,
+                "id": 22605,
                 "name": "ParameterList",
-                "src": "259:0:33"
+                "src": "259:0:30"
               }
             ],
-            "id": 23752,
+            "id": 22606,
             "name": "FunctionDefinition",
-            "src": "200:60:33"
+            "src": "200:60:30"
           }
         ],
-        "id": 23753,
+        "id": 22607,
         "name": "ContractDefinition",
-        "src": "119:143:33"
+        "src": "119:143:30"
       }
     ],
-    "id": 23754,
+    "id": 22608,
     "name": "SourceUnit",
-    "src": "36:226:33"
+    "src": "36:226:30"
   },
   "compiler": {
     "name": "solc",
@@ -707,7 +707,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T09:34:07.496Z",
+  "updatedAt": "2022-01-12T10:48:15.742Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

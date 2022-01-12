@@ -71,15 +71,15 @@
     "absolutePath": "project:/contracts/interfaces/IVaultAdapter.sol",
     "exportedSymbols": {
       "IVaultAdapter": [
-        23843
+        22697
       ]
     },
-    "id": 23844,
+    "id": 22698,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 23813,
+        "id": 22667,
         "literals": [
           "solidity",
           "^",
@@ -87,27 +87,27 @@
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "36:24:37"
+        "src": "36:24:34"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "id": 23814,
+        "id": 22668,
         "nodeType": "ImportDirective",
-        "scope": 23844,
+        "scope": 22698,
         "sourceUnit": 1405,
-        "src": "62:56:37",
+        "src": "62:56:34",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
         "file": "./IDetailedERC20.sol",
-        "id": 23815,
+        "id": 22669,
         "nodeType": "ImportDirective",
-        "scope": 23844,
-        "sourceUnit": 23736,
-        "src": "120:30:37",
+        "scope": 22698,
+        "sourceUnit": 22590,
+        "src": "120:30:34",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -117,15 +117,15 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 23816,
+          "id": 22670,
           "nodeType": "StructuredDocumentation",
-          "src": "152:53:37",
+          "src": "152:53:34",
           "text": "Interface for all Vault Adapter implementations."
         },
         "fullyImplemented": false,
-        "id": 23843,
+        "id": 22697,
         "linearizedBaseContracts": [
-          23843
+          22697
         ],
         "name": "IVaultAdapter",
         "nodeType": "ContractDefinition",
@@ -133,13 +133,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 23817,
+              "id": 22671,
               "nodeType": "StructuredDocumentation",
-              "src": "234:49:37",
+              "src": "234:49:34",
               "text": "@dev Gets the token that the adapter accepts."
             },
             "functionSelector": "fc0c546a",
-            "id": 23822,
+            "id": 22676,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -147,39 +147,39 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23818,
+              "id": 22672,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "300:2:37"
+              "src": "300:2:34"
             },
             "returnParameters": {
-              "id": 23821,
+              "id": 22675,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23820,
+                  "id": 22674,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23822,
-                  "src": "326:14:37",
+                  "scope": 22676,
+                  "src": "326:14:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IDetailedERC20_$23735",
+                    "typeIdentifier": "t_contract$_IDetailedERC20_$22589",
                     "typeString": "contract IDetailedERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 23819,
+                    "id": 22673,
                     "name": "IDetailedERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 23735,
-                    "src": "326:14:37",
+                    "referencedDeclaration": 22589,
+                    "src": "326:14:34",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IDetailedERC20_$23735",
+                      "typeIdentifier": "t_contract$_IDetailedERC20_$22589",
                       "typeString": "contract IDetailedERC20"
                     }
                   },
@@ -187,10 +187,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "325:16:37"
+              "src": "325:16:34"
             },
-            "scope": 23843,
-            "src": "286:56:37",
+            "scope": 22697,
+            "src": "286:56:34",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -198,13 +198,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 23823,
+              "id": 22677,
               "nodeType": "StructuredDocumentation",
-              "src": "346:64:37",
+              "src": "346:64:34",
               "text": "@dev The total value of the assets deposited into the vault."
             },
             "functionSelector": "d4c3eea0",
-            "id": 23828,
+            "id": 22682,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -212,24 +212,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23824,
+              "id": 22678,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "432:2:37"
+              "src": "432:2:34"
             },
             "returnParameters": {
-              "id": 23827,
+              "id": 22681,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23826,
+                  "id": 22680,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23828,
-                  "src": "458:7:37",
+                  "scope": 22682,
+                  "src": "458:7:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -237,10 +237,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23825,
+                    "id": 22679,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "458:7:37",
+                    "src": "458:7:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -250,10 +250,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "457:9:37"
+              "src": "457:9:34"
             },
-            "scope": 23843,
-            "src": "413:54:37",
+            "scope": 22697,
+            "src": "413:54:34",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -261,13 +261,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 23829,
+              "id": 22683,
               "nodeType": "StructuredDocumentation",
-              "src": "471:99:37",
+              "src": "471:99:34",
               "text": "@dev Deposits funds into the vault.\n @param _amount  the amount of funds to deposit."
             },
             "functionSelector": "b6b55f25",
-            "id": 23834,
+            "id": 22688,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -275,18 +275,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23832,
+              "id": 22686,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23831,
+                  "id": 22685,
                   "mutability": "mutable",
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23834,
-                  "src": "590:15:37",
+                  "scope": 22688,
+                  "src": "590:15:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -294,10 +294,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23830,
+                    "id": 22684,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "590:7:37",
+                    "src": "590:7:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -307,16 +307,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "589:17:37"
+              "src": "589:17:34"
             },
             "returnParameters": {
-              "id": 23833,
+              "id": 22687,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "615:0:37"
+              "src": "615:0:34"
             },
-            "scope": 23843,
-            "src": "573:43:37",
+            "scope": 22697,
+            "src": "573:43:34",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -324,13 +324,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 23835,
+              "id": 22689,
               "nodeType": "StructuredDocumentation",
-              "src": "620:263:37",
+              "src": "620:263:34",
               "text": "@dev Attempts to withdraw funds from the wrapped vault.\n The amount withdrawn to the recipient may be less than the amount requested.\n @param _recipient the recipient of the funds.\n @param _amount    the amount of funds to withdraw."
             },
             "functionSelector": "f3fef3a3",
-            "id": 23842,
+            "id": 22696,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -338,18 +338,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23840,
+              "id": 22694,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23837,
+                  "id": 22691,
                   "mutability": "mutable",
                   "name": "_recipient",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23842,
-                  "src": "904:18:37",
+                  "scope": 22696,
+                  "src": "904:18:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -357,10 +357,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 23836,
+                    "id": 22690,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "904:7:37",
+                    "src": "904:7:34",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -372,13 +372,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 23839,
+                  "id": 22693,
                   "mutability": "mutable",
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23842,
-                  "src": "924:15:37",
+                  "scope": 22696,
+                  "src": "924:15:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -386,10 +386,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23838,
+                    "id": 22692,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "924:7:37",
+                    "src": "924:7:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -399,33 +399,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "903:37:37"
+              "src": "903:37:34"
             },
             "returnParameters": {
-              "id": 23841,
+              "id": 22695,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "949:0:37"
+              "src": "949:0:34"
             },
-            "scope": 23843,
-            "src": "886:64:37",
+            "scope": 22697,
+            "src": "886:64:34",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 23844,
-        "src": "205:747:37"
+        "scope": 22698,
+        "src": "205:747:34"
       }
     ],
-    "src": "36:916:37"
+    "src": "36:916:34"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/interfaces/IVaultAdapter.sol",
       "exportedSymbols": {
         "IVaultAdapter": [
-          23843
+          22697
         ]
       },
       "license": "GPL-3.0"
@@ -440,39 +440,39 @@
             ".12"
           ]
         },
-        "id": 23813,
+        "id": 22667,
         "name": "PragmaDirective",
-        "src": "36:24:37"
+        "src": "36:24:34"
       },
       {
         "attributes": {
           "SourceUnit": 1405,
           "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
           "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-          "scope": 23844,
+          "scope": 22698,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 23814,
+        "id": 22668,
         "name": "ImportDirective",
-        "src": "62:56:37"
+        "src": "62:56:34"
       },
       {
         "attributes": {
-          "SourceUnit": 23736,
+          "SourceUnit": 22590,
           "absolutePath": "project:/contracts/interfaces/IDetailedERC20.sol",
           "file": "./IDetailedERC20.sol",
-          "scope": 23844,
+          "scope": 22698,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 23815,
+        "id": 22669,
         "name": "ImportDirective",
-        "src": "120:30:37"
+        "src": "120:30:34"
       },
       {
         "attributes": {
@@ -486,19 +486,19 @@
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            23843
+            22697
           ],
           "name": "IVaultAdapter",
-          "scope": 23844
+          "scope": 22698
         },
         "children": [
           {
             "attributes": {
               "text": "Interface for all Vault Adapter implementations."
             },
-            "id": 23816,
+            "id": 22670,
             "name": "StructuredDocumentation",
-            "src": "152:53:37"
+            "src": "152:53:34"
           },
           {
             "attributes": {
@@ -512,7 +512,7 @@
               ],
               "name": "token",
               "overrides": null,
-              "scope": 23843,
+              "scope": 22697,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -522,9 +522,9 @@
                 "attributes": {
                   "text": "@dev Gets the token that the adapter accepts."
                 },
-                "id": 23817,
+                "id": 22671,
                 "name": "StructuredDocumentation",
-                "src": "234:49:37"
+                "src": "234:49:34"
               },
               {
                 "attributes": {
@@ -533,9 +533,9 @@
                   ]
                 },
                 "children": [],
-                "id": 23818,
+                "id": 22672,
                 "name": "ParameterList",
-                "src": "300:2:37"
+                "src": "300:2:34"
               },
               {
                 "children": [
@@ -545,7 +545,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 23822,
+                      "scope": 22676,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IDetailedERC20",
@@ -557,27 +557,27 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IDetailedERC20",
-                          "referencedDeclaration": 23735,
+                          "referencedDeclaration": 22589,
                           "type": "contract IDetailedERC20"
                         },
-                        "id": 23819,
+                        "id": 22673,
                         "name": "UserDefinedTypeName",
-                        "src": "326:14:37"
+                        "src": "326:14:34"
                       }
                     ],
-                    "id": 23820,
+                    "id": 22674,
                     "name": "VariableDeclaration",
-                    "src": "326:14:37"
+                    "src": "326:14:34"
                   }
                 ],
-                "id": 23821,
+                "id": 22675,
                 "name": "ParameterList",
-                "src": "325:16:37"
+                "src": "325:16:34"
               }
             ],
-            "id": 23822,
+            "id": 22676,
             "name": "FunctionDefinition",
-            "src": "286:56:37"
+            "src": "286:56:34"
           },
           {
             "attributes": {
@@ -591,7 +591,7 @@
               ],
               "name": "totalValue",
               "overrides": null,
-              "scope": 23843,
+              "scope": 22697,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -601,9 +601,9 @@
                 "attributes": {
                   "text": "@dev The total value of the assets deposited into the vault."
                 },
-                "id": 23823,
+                "id": 22677,
                 "name": "StructuredDocumentation",
-                "src": "346:64:37"
+                "src": "346:64:34"
               },
               {
                 "attributes": {
@@ -612,9 +612,9 @@
                   ]
                 },
                 "children": [],
-                "id": 23824,
+                "id": 22678,
                 "name": "ParameterList",
-                "src": "432:2:37"
+                "src": "432:2:34"
               },
               {
                 "children": [
@@ -624,7 +624,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 23828,
+                      "scope": 22682,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -637,24 +637,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23825,
+                        "id": 22679,
                         "name": "ElementaryTypeName",
-                        "src": "458:7:37"
+                        "src": "458:7:34"
                       }
                     ],
-                    "id": 23826,
+                    "id": 22680,
                     "name": "VariableDeclaration",
-                    "src": "458:7:37"
+                    "src": "458:7:34"
                   }
                 ],
-                "id": 23827,
+                "id": 22681,
                 "name": "ParameterList",
-                "src": "457:9:37"
+                "src": "457:9:34"
               }
             ],
-            "id": 23828,
+            "id": 22682,
             "name": "FunctionDefinition",
-            "src": "413:54:37"
+            "src": "413:54:34"
           },
           {
             "attributes": {
@@ -668,7 +668,7 @@
               ],
               "name": "deposit",
               "overrides": null,
-              "scope": 23843,
+              "scope": 22697,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -678,9 +678,9 @@
                 "attributes": {
                   "text": "@dev Deposits funds into the vault.\n @param _amount  the amount of funds to deposit."
                 },
-                "id": 23829,
+                "id": 22683,
                 "name": "StructuredDocumentation",
-                "src": "471:99:37"
+                "src": "471:99:34"
               },
               {
                 "children": [
@@ -690,7 +690,7 @@
                       "mutability": "mutable",
                       "name": "_amount",
                       "overrides": null,
-                      "scope": 23834,
+                      "scope": 22688,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -703,19 +703,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23830,
+                        "id": 22684,
                         "name": "ElementaryTypeName",
-                        "src": "590:7:37"
+                        "src": "590:7:34"
                       }
                     ],
-                    "id": 23831,
+                    "id": 22685,
                     "name": "VariableDeclaration",
-                    "src": "590:15:37"
+                    "src": "590:15:34"
                   }
                 ],
-                "id": 23832,
+                "id": 22686,
                 "name": "ParameterList",
-                "src": "589:17:37"
+                "src": "589:17:34"
               },
               {
                 "attributes": {
@@ -724,14 +724,14 @@
                   ]
                 },
                 "children": [],
-                "id": 23833,
+                "id": 22687,
                 "name": "ParameterList",
-                "src": "615:0:37"
+                "src": "615:0:34"
               }
             ],
-            "id": 23834,
+            "id": 22688,
             "name": "FunctionDefinition",
-            "src": "573:43:37"
+            "src": "573:43:34"
           },
           {
             "attributes": {
@@ -745,7 +745,7 @@
               ],
               "name": "withdraw",
               "overrides": null,
-              "scope": 23843,
+              "scope": 22697,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -755,9 +755,9 @@
                 "attributes": {
                   "text": "@dev Attempts to withdraw funds from the wrapped vault.\n The amount withdrawn to the recipient may be less than the amount requested.\n @param _recipient the recipient of the funds.\n @param _amount    the amount of funds to withdraw."
                 },
-                "id": 23835,
+                "id": 22689,
                 "name": "StructuredDocumentation",
-                "src": "620:263:37"
+                "src": "620:263:34"
               },
               {
                 "children": [
@@ -767,7 +767,7 @@
                       "mutability": "mutable",
                       "name": "_recipient",
                       "overrides": null,
-                      "scope": 23842,
+                      "scope": 22696,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -781,14 +781,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 23836,
+                        "id": 22690,
                         "name": "ElementaryTypeName",
-                        "src": "904:7:37"
+                        "src": "904:7:34"
                       }
                     ],
-                    "id": 23837,
+                    "id": 22691,
                     "name": "VariableDeclaration",
-                    "src": "904:18:37"
+                    "src": "904:18:34"
                   },
                   {
                     "attributes": {
@@ -796,7 +796,7 @@
                       "mutability": "mutable",
                       "name": "_amount",
                       "overrides": null,
-                      "scope": 23842,
+                      "scope": 22696,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -809,19 +809,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23838,
+                        "id": 22692,
                         "name": "ElementaryTypeName",
-                        "src": "924:7:37"
+                        "src": "924:7:34"
                       }
                     ],
-                    "id": 23839,
+                    "id": 22693,
                     "name": "VariableDeclaration",
-                    "src": "924:15:37"
+                    "src": "924:15:34"
                   }
                 ],
-                "id": 23840,
+                "id": 22694,
                 "name": "ParameterList",
-                "src": "903:37:37"
+                "src": "903:37:34"
               },
               {
                 "attributes": {
@@ -830,24 +830,24 @@
                   ]
                 },
                 "children": [],
-                "id": 23841,
+                "id": 22695,
                 "name": "ParameterList",
-                "src": "949:0:37"
+                "src": "949:0:34"
               }
             ],
-            "id": 23842,
+            "id": 22696,
             "name": "FunctionDefinition",
-            "src": "886:64:37"
+            "src": "886:64:34"
           }
         ],
-        "id": 23843,
+        "id": 22697,
         "name": "ContractDefinition",
-        "src": "205:747:37"
+        "src": "205:747:34"
       }
     ],
-    "id": 23844,
+    "id": 22698,
     "name": "SourceUnit",
-    "src": "36:916:37"
+    "src": "36:916:34"
   },
   "compiler": {
     "name": "solc",
@@ -855,7 +855,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T09:34:07.498Z",
+  "updatedAt": "2022-01-12T10:48:15.745Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

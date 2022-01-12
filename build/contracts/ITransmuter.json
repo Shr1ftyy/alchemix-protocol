@@ -32,15 +32,15 @@
     "absolutePath": "project:/contracts/interfaces/ITransmuter.sol",
     "exportedSymbols": {
       "ITransmuter": [
-        23811
+        22665
       ]
     },
-    "id": 23812,
+    "id": 22666,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 23803,
+        "id": 22657,
         "literals": [
           "solidity",
           "^",
@@ -48,7 +48,7 @@
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "36:24:36"
+        "src": "36:24:33"
       },
       {
         "abstract": false,
@@ -57,9 +57,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 23811,
+        "id": 22665,
         "linearizedBaseContracts": [
-          23811
+          22665
         ],
         "name": "ITransmuter",
         "nodeType": "ContractDefinition",
@@ -68,7 +68,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "fb932108",
-            "id": 23810,
+            "id": 22664,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -76,18 +76,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 23808,
+              "id": 22662,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23805,
+                  "id": 22659,
                   "mutability": "mutable",
                   "name": "origin",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23810,
-                  "src": "110:14:36",
+                  "scope": 22664,
+                  "src": "110:14:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -95,10 +95,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 23804,
+                    "id": 22658,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "110:7:36",
+                    "src": "110:7:33",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -110,13 +110,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 23807,
+                  "id": 22661,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 23810,
-                  "src": "126:14:36",
+                  "scope": 22664,
+                  "src": "126:14:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -124,10 +124,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 23806,
+                    "id": 22660,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "126:7:36",
+                    "src": "126:7:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -137,33 +137,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "109:32:36"
+              "src": "109:32:33"
             },
             "returnParameters": {
-              "id": 23809,
+              "id": 22663,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "150:0:36"
+              "src": "150:0:33"
             },
-            "scope": 23811,
-            "src": "89:62:36",
+            "scope": 22665,
+            "src": "89:62:33",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 23812,
-        "src": "62:91:36"
+        "scope": 22666,
+        "src": "62:91:33"
       }
     ],
-    "src": "36:117:36"
+    "src": "36:117:33"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/interfaces/ITransmuter.sol",
       "exportedSymbols": {
         "ITransmuter": [
-          23811
+          22665
         ]
       },
       "license": "GPL-3.0"
@@ -178,9 +178,9 @@
             ".12"
           ]
         },
-        "id": 23803,
+        "id": 22657,
         "name": "PragmaDirective",
-        "src": "36:24:36"
+        "src": "36:24:33"
       },
       {
         "attributes": {
@@ -195,10 +195,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            23811
+            22665
           ],
           "name": "ITransmuter",
-          "scope": 23812
+          "scope": 22666
         },
         "children": [
           {
@@ -214,7 +214,7 @@
               ],
               "name": "distribute",
               "overrides": null,
-              "scope": 23811,
+              "scope": 22665,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -228,7 +228,7 @@
                       "mutability": "mutable",
                       "name": "origin",
                       "overrides": null,
-                      "scope": 23810,
+                      "scope": 22664,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -242,14 +242,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 23804,
+                        "id": 22658,
                         "name": "ElementaryTypeName",
-                        "src": "110:7:36"
+                        "src": "110:7:33"
                       }
                     ],
-                    "id": 23805,
+                    "id": 22659,
                     "name": "VariableDeclaration",
-                    "src": "110:14:36"
+                    "src": "110:14:33"
                   },
                   {
                     "attributes": {
@@ -257,7 +257,7 @@
                       "mutability": "mutable",
                       "name": "amount",
                       "overrides": null,
-                      "scope": 23810,
+                      "scope": 22664,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -270,19 +270,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 23806,
+                        "id": 22660,
                         "name": "ElementaryTypeName",
-                        "src": "126:7:36"
+                        "src": "126:7:33"
                       }
                     ],
-                    "id": 23807,
+                    "id": 22661,
                     "name": "VariableDeclaration",
-                    "src": "126:14:36"
+                    "src": "126:14:33"
                   }
                 ],
-                "id": 23808,
+                "id": 22662,
                 "name": "ParameterList",
-                "src": "109:32:36"
+                "src": "109:32:33"
               },
               {
                 "attributes": {
@@ -291,24 +291,24 @@
                   ]
                 },
                 "children": [],
-                "id": 23809,
+                "id": 22663,
                 "name": "ParameterList",
-                "src": "150:0:36"
+                "src": "150:0:33"
               }
             ],
-            "id": 23810,
+            "id": 22664,
             "name": "FunctionDefinition",
-            "src": "89:62:36"
+            "src": "89:62:33"
           }
         ],
-        "id": 23811,
+        "id": 22665,
         "name": "ContractDefinition",
-        "src": "62:91:36"
+        "src": "62:91:33"
       }
     ],
-    "id": 23812,
+    "id": 22666,
     "name": "SourceUnit",
-    "src": "36:117:36"
+    "src": "36:117:33"
   },
   "compiler": {
     "name": "solc",
@@ -316,7 +316,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-11T09:34:07.497Z",
+  "updatedAt": "2022-01-12T10:48:15.744Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
